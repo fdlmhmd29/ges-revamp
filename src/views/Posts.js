@@ -1,9 +1,10 @@
 import MDX from "@mdx-js/runtime"
-import { Flex, Box, Heading, Text } from "theme-ui"
+import { Flex, Box, Heading } from "theme-ui"
 import Image from "next/image"
-import Container from "../ui/Container"
-import DraftBadge from "../ui/DraftBadge"
 import Link from "next/link"
+
+// Yellow
+import { Container, DraftBadge } from "../lib"
 
 const Posts = ({ posts, prevPosts, nextPosts }) => {
   const isLocal = process.env.NODE_ENV === "development"

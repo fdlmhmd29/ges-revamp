@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { Box } from "theme-ui"
-import Nav from "./Nav"
+import { Nav } from "../lib"
 
 function Header() {
   const [scroll, setScrolled] = useState(false)

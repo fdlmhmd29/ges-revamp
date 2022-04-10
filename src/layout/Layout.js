@@ -1,13 +1,8 @@
 import { Box } from "theme-ui"
 import PropTypes from "prop-types"
-import Head from "./Head"
-import Style from "./Style"
 
-import Header from "../ui/Header"
-import Main from "../ui/Main"
-import Footer from "../ui/Footer"
-
-// inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
+// Yellow
+import { Header, Main, Footer, Head, Style } from "../lib"
 
 const Layout = (props) => {
   return (

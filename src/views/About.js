@@ -1,6 +1,6 @@
 import { MDXProvider } from "@mdx-js/react"
 import MarkdownContent from "../mdx/about.mdx"
-import Container from "../ui/Container"
+import { Container } from "../lib"
 
 const About = (props) => {
   return (

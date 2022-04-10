@@ -2,11 +2,10 @@ import { Container } from "theme-ui"
 import { useEffect } from "react"
 
 // Yellow
-import ThemeToggle from "../ui/ThemeToggle"
+import { ThemeToggle, Links, Logo } from "../lib"
 import theme from "../layout/Theme"
-import Links from "./Links"
-import Logo from "./Logo"
 
+// inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
 let codeToRunOnClient = false
 if (theme.colors.modes && theme.colors.modes.length !== 0) {
   codeToRunOnClient = `

@@ -1,12 +1,11 @@
 import MDX from "@mdx-js/runtime"
-import config from "../../blog.config"
 import { DiscussionEmbed } from "disqus-react"
 import { Box, Text, Heading } from "theme-ui"
-import Link from "next/link"
 import Image from "next/image"
-import Container from "../ui/Container"
-import CodeBlock from "../ui/CodeBlock"
-import DraftBadge from "../ui/DraftBadge"
+
+// Yellow
+import config from "../../blog.config"
+import { Container, CodeBlock, DraftBadge } from "../lib"
 
 const BlogPost = ({ post }) => {
   const isLocal = process.env.NODE_ENV === "development"

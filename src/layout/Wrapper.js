@@ -1,8 +1,10 @@
 import { ThemeProvider } from "theme-ui"
+import ReactGA from "react-ga"
+
+// Yellow
 import Layout from "./Layout"
 import Theme from "./Theme"
 import config from "../../blog.config"
-import ReactGA from "react-ga"
 
 const Wrapper = (props) => {
   if (typeof config.analytics === "string" && config.analytics !== "") {

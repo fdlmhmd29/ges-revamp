@@ -1,6 +1,6 @@
 import { Box } from "theme-ui"
 import { useRouter } from "next/router"
-import NavLink from "./NavLink"
+import { NavLink } from "../lib"
 
 const data = [
   {
