@@ -1,20 +1,58 @@
-import { useRouter } from "next/router"
 import { Container } from "theme-ui"
-import NavLink from "./NavLink"
+import { useEffect } from "react"
+
+// Yellow
+import ThemeToggle from "../ui/ThemeToggle"
+import theme from "../layout/Theme"
 import Links from "./Links"
+import Logo from "./Logo"
+
+let codeToRunOnClient = false
+if (theme.colors.modes && theme.colors.modes.length !== 0) {
+  codeToRunOnClient = `
+  (function() {
+    const theme = ${JSON.stringify(theme)}
+
+    let mode = localStorage.getItem("theme-ui-color-mode")
+
+    if (!mode) {
+      const mql = window.matchMedia('(prefers-color-scheme: dark)')
+      if (typeof mql.matches === 'boolean' && mql.matches) {
+        mode = "dark"
+      }
+    }
+
+    if (mode && typeof theme.colors.modes === "object" && typeof theme.colors.modes[mode] === "object") {
+      const root = document.documentElement
+      Object.keys(theme.colors.modes[mode]).forEach((colorName) => {
+        document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
+      })
+    }
+  })()`
+}
 
 const Nav = (props) => {
-  const router = useRouter()
+  useEffect(() => {
+    // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
+    document.body.removeAttribute("style")
+  }, [])
+
   return (
-    <Container id="nav-container" as={"nav"} sx={styles.navContainer}>
-      <NavLink href={"/"}>LOGO</NavLink>
+    <Container id="nav" as={"nav"} sx={styles.container}>
+      <Logo />
       <Links />
+
+      {/* ---Script--- */}
+      {codeToRunOnClient && (
+        <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
+      )}
+      {typeof theme.colors.modes === "object" && <ThemeToggle />}
     </Container>
   )
 }
 
 const styles = {
-  navContainer: {
+  container: {
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",

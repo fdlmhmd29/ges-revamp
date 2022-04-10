@@ -1,34 +1,6 @@
 import { Box } from "theme-ui"
 import { useRouter } from "next/router"
-import { useEffect } from "react"
-
-import ThemeToggle from "../ui/ThemeToggle"
-import theme from "../layout/Theme"
 import NavLink from "./NavLink"
-
-let codeToRunOnClient = false
-if (theme.colors.modes && theme.colors.modes.length !== 0) {
-  codeToRunOnClient = `
-  (function() {
-    const theme = ${JSON.stringify(theme)}
-
-    let mode = localStorage.getItem("theme-ui-color-mode")
-
-    if (!mode) {
-      const mql = window.matchMedia('(prefers-color-scheme: dark)')
-      if (typeof mql.matches === 'boolean' && mql.matches) {
-        mode = "dark"
-      }
-    }
-
-    if (mode && typeof theme.colors.modes === "object" && typeof theme.colors.modes[mode] === "object") {
-      const root = document.documentElement
-      Object.keys(theme.colors.modes[mode]).forEach((colorName) => {
-        document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
-      })
-    }
-  })()`
-}
 
 const data = [
   {
@@ -46,16 +18,10 @@ const data = [
 
 const Links = (props) => {
   const router = useRouter()
-  useEffect(() => {
-    // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
-    document.body.removeAttribute("style")
-  }, [])
+
   return (
     <Box id="nav-links" as={"div"} sx={styles.links}>
-      {codeToRunOnClient && (
-        <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
-      )}
-      <ul>
+      <Box id="nav-links--ul" as={"ul"} sx={styles.ul}>
         {data.map((item) => (
           <li key={item.id}>
             <NavLink
@@ -69,8 +35,7 @@ const Links = (props) => {
             </NavLink>
           </li>
         ))}
-      </ul>
-      {typeof theme.colors.modes === "object" && <ThemeToggle />}
+      </Box>
     </Box>
   )
 }
@@ -80,6 +45,12 @@ const styles = {
     flex: 1,
     display: "flex",
     justifyContent: "space-between",
+  },
+
+  ul: {
+    display: "flex",
+    alignItems: "center",
+    width: "100%",
   },
 }
 

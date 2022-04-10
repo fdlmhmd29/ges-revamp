@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react"
-import { Box, useColorMode } from "theme-ui"
+import { useColorMode, Box } from "theme-ui"
 import { UilMoon, UilSun } from "@iconscout/react-unicons"
 
 // Yellow
-import Button from "./Button"
 
 const ThemeToggle = (props) => {
   const [colorMode, setColorMode] = useColorMode()
@@ -15,14 +14,24 @@ const ThemeToggle = (props) => {
   }, [])
 
   return (
-    <Box>
-      <Button
-        onClick={(e) => {
-          setColorMode(colorMode === "default" ? "dark" : "default")
-        }}
-      >
-        {colorMode === "default" ? <UilMoon /> : <UilSun />}
-      </Button>
+    <Box
+      id="theme-toggle"
+      as={"div"}
+      onClick={(e) => {
+        setColorMode(colorMode === "default" ? "dark" : "default")
+      }}
+      sx={{
+        color: colorMode === "default" ? "text" : "primary",
+        cursor: "pointer",
+        display: "flex",
+        alignItems: "center",
+
+        ":hover": {
+          color: colorMode === "default" ? "primary" : "secondary",
+        },
+      }}
+    >
+      {colorMode === "default" ? <UilMoon size={17} /> : <UilSun />}
     </Box>
   )
 }

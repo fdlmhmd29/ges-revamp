@@ -5,16 +5,19 @@ const NavLink = ({ href, active, children }) => (
   <Link href={href}>
     <A
       sx={{
-        py: [2, 3],
-        px: [3, 4],
-        fontSize: 3,
-        fontWeight: 600,
+        position: "relative",
         display: "inline-block",
+        margin: "0 1rem",
+        textTransform: "uppercase",
+        fontSize: "0.75rem",
+        letterSpacing: "0.031rem",
+        fontWeight: 500,
         textDecoration: "none",
-        borderBottom: "1px solid",
+        borderBottom: "0.031rem solid",
         borderColor: active ? "primary" : "background",
         cursor: "pointer",
         transition: "border-color .5s",
+
         "&:hover": {
           borderColor: "primary",
         },

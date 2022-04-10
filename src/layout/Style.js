@@ -54,6 +54,7 @@ const Style = (props) => (
       text-decoration: none;
       background-color: transparent;
     }
+
     abbr[title] {
       border-bottom: none;
       text-decoration: underline;
@@ -172,12 +173,28 @@ const Style = (props) => (
       height: 100%;
     }
 
+    #nav-logo {
+      font-family: "Abril Fatface", cursive;
+    }
+
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 10;
+      transition: 0.3s;
+    }
+
+    header.scrolled {
+      background-color: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(15px);
+    }
+
+    header.scrolled .logo {
+      height: 5rem;
+      line-height: 5rem;
     }
 
     button,
