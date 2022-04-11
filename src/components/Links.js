@@ -5,14 +5,18 @@ import { NavLink } from "../lib"
 const data = [
   {
     id: 1,
-    title: "Blog",
+    title: "Home",
     path: "/",
-    includes: "/blog",
   },
   {
     id: 2,
     title: "About",
     path: "/about",
+  },
+  {
+    id: 2,
+    title: "Blog",
+    path: "/posts",
   },
 ]
 

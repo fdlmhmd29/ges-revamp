@@ -187,8 +187,8 @@ const Style = (props) => (
     }
 
     header.scrolled {
-      background-color: rgba(255, 255, 255, 0.9);
-      box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+      background-color: hsl(256, 100%, 97%);
+      box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.03);
       backdrop-filter: blur(15px);
     }
 
@@ -226,6 +226,11 @@ const Style = (props) => (
       margin: 0 0 16px;
       font-family: ${theme.fonts.heading};
     }
+
+    #showcase__subtitle {
+      font-family: "Abril Fatface", cursive;
+    }
+
     input,
     select,
     textarea {

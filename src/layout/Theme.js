@@ -1,25 +1,33 @@
 export default {
   useCustomProperties: true,
+
   useColorSchemeMediaQuery: true,
+
   fonts: {
     body: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
     heading: "inherit",
   },
+
   fontSizes: [16, 18, 20, 24, 30, 36, 40, 48, 64, 72, 96],
   fontWeights: {
     lite: 200,
     body: 400,
     heading: 700,
   },
+
   lineHeights: {
     body: 1.5,
     heading: 1.25,
   },
+
   colors: {
     primary: "#26b600",
+    primaryHover: "#1b8300",
     secondary: "#f5b314",
     background: "#f4f0ff",
-    text: "#1b1e21",
+    title: "#26b600",
+    subtitle: "#1b1e21",
+    text: "#3a4047",
     blue: "#4169e1",
     cyan: "#41b9e1",
     gray: "#667788",
@@ -31,14 +39,48 @@ export default {
     white: "#fff",
     yellow: "#FFDD22",
     lite: "#eee",
+
     modes: {
       dark: {
+        title: "#26b600",
+        subtitle: "#fff",
         text: "#fff",
         background: "#000",
         lite: "#333",
       },
     },
   },
+
+  buttons: {
+    primary: {
+      display: "inline-block",
+      padding: "0.9rem 1rem",
+      borderRadius: "12px",
+      letterSpacing: "0.4px",
+      textTransform: "capitalize",
+      transition: "all 0.2s ease",
+
+      "&:hover": {
+        background: "primaryHover",
+      },
+    },
+
+    secondary: {
+      background: "transparent",
+      fontWeight: 500,
+      display: "inline-block",
+      padding: "0.9rem 1rem",
+      borderRadius: "12px",
+      letterSpacing: "0.4px",
+      textTransform: "capitalize",
+      transition: "all 0.2s ease",
+
+      "&:hover": {
+        color: "secondary",
+      },
+    },
+  },
+
   layout: {
     container: {
       position: "relative",
@@ -49,8 +91,11 @@ export default {
     },
   },
   space: [0, 4, 8, 16, 32, 64, 128],
+
   breakpoints: ["32em", "48em", "64em", "80em"],
+
   radii: [0, 3, 6],
+
   shadows: {
     card: "0 0 4px rgba(0, 0, 0, .125)",
     sm: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
