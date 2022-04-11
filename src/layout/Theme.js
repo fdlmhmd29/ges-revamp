@@ -22,7 +22,7 @@ export default {
 
   colors: {
     primary: "#26b600",
-    primaryHover: "#1b8300",
+    primaryHover: "#22a100",
     secondary: "#f5b314",
     background: "#f4f0ff",
     title: "#26b600",
@@ -66,12 +66,17 @@ export default {
     },
 
     secondary: {
+      position: "relative",
+      color: "primary",
       background: "transparent",
       fontWeight: 500,
       display: "inline-block",
       padding: "0.9rem 1rem",
-      borderRadius: "12px",
-      letterSpacing: "0.4px",
+      borderRadius: "0px",
+      letterSpacing: "0px",
+      borderBottom: "2.5px solid hsl(42, 92%, 52%)",
+      padding: "0.15rem 0",
+      fontSize: "0.9rem",
       textTransform: "capitalize",
       transition: "all 0.2s ease",
 
