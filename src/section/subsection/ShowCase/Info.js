@@ -20,7 +20,11 @@ const Info = () => {
             Hubungi Kami
           </Button>
         </Link>
-        <Link href="mailto:alpanumerik1@gmail.com">Unduh Profil</Link>
+        <Link href="mailto:pt.greenfield@gmail.com">
+          <Button id="showcase__cta-button" as={"button"} variant={"secondary"}>
+            Unduh Profil
+          </Button>
+        </Link>
       </Box>
     </Box>
   )
@@ -40,7 +44,7 @@ const styles = {
 
   h1: {
     color: "subtitle",
-    fontSize: "3rem",
+    fontSize: "2rem",
     fontWeight: 500,
     lineHeight: "1.3",
   },
