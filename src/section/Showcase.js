@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Container } from "theme-ui"
-import Info from "./sub-section/ShowCase/info"
+import Info from "./subsection/ShowCase/Info"
 
 const ShowCase = () => {
   return (

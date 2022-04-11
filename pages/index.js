@@ -1,7 +1,7 @@
 import { Container } from "theme-ui"
 import config from "../blog.config"
 import Wrapper from "../src/layout/Wrapper"
-import ShowCase from "../src/section/ShowCase"
+import ShowCase from "../src/section/Showcase"
 
 const PostsPage = () => (
   <Wrapper
