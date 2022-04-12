@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx } from "@emotion/react"
-import theme from "./Theme"
+import { jsx } from "theme-ui";
+import theme from "./Theme";
 
 const Style = (props) => (
   <style jsx global>{`
@@ -12,76 +12,87 @@ const Style = (props) => (
     input {
       overflow: visible;
     }
+
     progress,
     sub,
     sup {
       vertical-align: baseline;
     }
+
     [type="checkbox"],
     [type="radio"],
     legend {
       box-sizing: border-box;
       padding: 0;
     }
+
     html {
       line-height: 1.5;
       -webkit-text-size-adjust: 100%;
     }
+
     body {
       margin: 0;
       font-family: "Poppins", sans-serif;
     }
+
     hr {
       box-sizing: content-box;
       height: 0;
     }
+
     kbd,
     samp {
       font-family: monospace, monospace;
       font-size: 14px;
     }
+
     pre {
       width: 100%;
       overflow-x: scroll;
       margin-bottom: 24px;
     }
+
     p > code {
       background-color: #f6f8fa;
       padding: 8px;
       font-size: 110%;
     }
-    a {
-      text-decoration: none;
-      background-color: transparent;
-    }
 
     abbr[title] {
       border-bottom: none;
-      text-decoration: underline;
       text-decoration: underline dotted;
     }
+
     b,
     strong {
-      font-weight: bolder;
+      font-weight: 600;
+      color: ${theme.colors.primary};
     }
+
     small {
       font-size: 80%;
     }
+
     sub,
     sup {
       font-size: 75%;
       line-height: 0;
       position: relative;
     }
+
     sub {
       bottom: -0.25em;
     }
+
     sup {
       top: -0.5em;
     }
+
     img {
       border-style: none;
     }
+
     button,
     input,
     optgroup,
@@ -92,16 +103,19 @@ const Style = (props) => (
       line-height: 1.15;
       margin: 0;
     }
+
     button,
     select {
       text-transform: none;
     }
+
     [type="button"],
     [type="reset"],
     [type="submit"],
     button {
       -webkit-appearance: button;
     }
+
     [type="button"]::-moz-focus-inner,
     [type="reset"]::-moz-focus-inner,
     [type="submit"]::-moz-focus-inner,
@@ -109,56 +123,70 @@ const Style = (props) => (
       border-style: none;
       padding: 0;
     }
+
     [type="button"]:-moz-focusring,
     [type="reset"]:-moz-focusring,
     [type="submit"]:-moz-focusring,
     button:-moz-focusring {
       outline: ButtonText dotted 1px;
     }
+
     fieldset {
       padding: 0.35em 0.75em 0.625em;
     }
+
     legend {
       color: inherit;
       display: table;
       max-width: 100%;
       white-space: normal;
     }
+
     textarea {
       overflow: auto;
     }
+
     [type="number"]::-webkit-inner-spin-button,
     [type="number"]::-webkit-outer-spin-button {
       height: auto;
     }
+
     [type="search"] {
       -webkit-appearance: textfield;
       outline-offset: -2px;
     }
+
     [type="search"]::-webkit-search-decoration {
       -webkit-appearance: none;
     }
+
     ::-webkit-file-upload-button {
       -webkit-appearance: button;
       font: inherit;
     }
+
     details {
       display: block;
     }
+
     summary {
       display: list-item;
     }
+
     [hidden],
     template {
       display: none;
     }
+
     html {
       box-sizing: border-box;
     }
+
     ::selection {
       background-color: ${theme.colors.primary};
       color: ${theme.colors.background};
     }
+
     *,
     *::before,
     *::after {
@@ -166,6 +194,7 @@ const Style = (props) => (
       margin: 0;
       box-sizing: border-box;
     }
+
     body {
       overflow-x: hidden;
       margin: 0;
@@ -205,17 +234,27 @@ const Style = (props) => (
       border-radius: 4px;
       border: none;
     }
+
     p {
       line-height: 1.5;
       margin: 0 0 16px;
     }
+
+    a {
+      color: ${theme.colors.primary};
+      text-decoration: none;
+      background-color: transparent;
+    }
+
     ul {
       list-style: none;
       margin-top: 0;
     }
+
     select {
       padding: 8px;
     }
+
     h1,
     h2,
     h3,
@@ -239,20 +278,22 @@ const Style = (props) => (
       font-size: 16px;
       font-family: inherit;
     }
+
     select {
       -webkit-appearance: menulist;
     }
+
     table {
       border-collapse: collapse;
     }
+
     input {
       text-align: inherit;
       padding-left: 4px;
     }
-    a {
-      color: ${theme.colors.primary};
-    }
-  `}</style>
-)
 
-export default Style
+    /* Others */
+  `}</style>
+);
+
+export default Style;

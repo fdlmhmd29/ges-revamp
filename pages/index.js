@@ -1,7 +1,8 @@
-import { Container } from "theme-ui"
+import {Container} from "theme-ui"
 import config from "../blog.config"
 import Wrapper from "../src/layout/Wrapper"
 import ShowCase from "../src/section/Showcase"
+import About from "../src/section/About"
 
 const PostsPage = () => (
   <Wrapper
@@ -12,11 +13,11 @@ const PostsPage = () => (
     imageAlt={config.shareImageAlt}
   >
     <Container
-      id="section"
-      as={"section"}
-      sx={{ width: "100%", overflow: "hidden", padding: "120px 0 0 0" }}
+      id="section-container"
+      sx={{width: "100%", overflow: "hidden", padding: "120px 0 0 0"}}
     >
-      <ShowCase />
+      <ShowCase/>
+      <About/>
     </Container>
   </Wrapper>
 )

@@ -1,61 +1,52 @@
-import React from "react"
-import { Box, Button, Heading, Text, Link } from "theme-ui"
+import React from "react";
+import { Box, Button, Heading, Link, Text } from "theme-ui";
 
 const Info = () => {
   return (
     <Box id="showcase__info" as={"div"}>
-      <Heading id="showcase__title" as={"h3"} sx={styles.h3}>
-        PT. Greenfield Environment Solution
+      <Heading id="showcase__title" as={"h3"} variant={"heading_primary"}>
+        Penyedia jasa pengurusan
       </Heading>
-      <Heading id="showcase__subtitle" as={"h1"} sx={styles.h1}>
+      <Heading id="showcase__subtitle" as={"h1"} variant={"heading_secondary"}>
         Layanan Konsultasi Lingkungan
       </Heading>
-      <Text id="showcase__caption" as={"p"} sx={styles.p}>
-        Agensi konsultasi terbaik dan profesional dengan metode yang tepat,
-        efisien dan efektif dari berbagai aspek adalah pondasi utama perusahaan
+      <Text id="showcase__caption" as={"p"} variant={"heading_paragraph"}>
+        Bekerjasama dengan{" "}
+        <strong>
+          Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia
+        </strong>
+        , kami akan membantu Anda untuk menerbitkan Izin Lingkungan suatu
+        bangunan dengan mudah dan praktis.
       </Text>
       <Box id="showcase__cta" as={"div"} sx={styles.cta}>
-        <Link href="mailto:pt.greenfield@gmail.com">
-          <Button id="showcase__cta-button" as={"button"} variant={"primary"}>
+        <Link href="mailto:pt.greenfield@gmail.com" as={"a"}>
+          <Button
+            id="showcase__cta-primary-button"
+            as={"button"}
+            variant={"primary"}
+          >
             Hubungi Kami
           </Button>
         </Link>
-        <Link href="mailto:pt.greenfield@gmail.com">
-          <Button id="showcase__cta-button" as={"button"} variant={"secondary"}>
+        <Link
+          download={true}
+          href="https://ik.imagekit.io/lgntlo62o6w/Profile.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1649681210048"
+          as={"a"}
+        >
+          <Button
+            id="showcase__cta-secondary-button"
+            as={"button"}
+            variant={"secondary"}
+          >
             Unduh Profil
           </Button>
         </Link>
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 const styles = {
-  h3: {
-    color: "title",
-    textTransform: "uppercase",
-    fontSize: "0.85rem",
-    letterSpacing: "1px",
-    borderLeft: "3px solid hsl(42, 92%, 52%)",
-    padding: "0.13rem 0.75rem",
-    marginBottom: "1rem",
-    fontWeight: 500,
-  },
-
-  h1: {
-    color: "subtitle",
-    fontSize: "2rem",
-    fontWeight: 500,
-    lineHeight: "1.3",
-  },
-
-  p: {
-    color: "text",
-    fontSize: "0.9rem",
-    lineHeight: "2",
-    margin: "2rem 0",
-  },
-
   cta: {
     display: "flex",
     alignItems: "center",
@@ -64,6 +55,6 @@ const styles = {
       marginRight: "1.5rem",
     },
   },
-}
+};
 
-export default Info
+export default Info;

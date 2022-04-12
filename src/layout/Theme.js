@@ -23,7 +23,7 @@ export default {
   colors: {
     primary: "#26b600",
     primaryHover: "#22a100",
-    secondary: "#f5b314",
+    secondary: "#f4b313",
     background: "#f4f0ff",
     title: "#26b600",
     subtitle: "#1b1e21",
@@ -55,7 +55,9 @@ export default {
     primary: {
       display: "inline-block",
       padding: "0.9rem 1rem",
-      borderRadius: "12px",
+      borderRadius: "5px",
+      fontSize: "0.85rem",
+      fontWeight: 600,
       letterSpacing: "0.4px",
       textTransform: "capitalize",
       transition: "all 0.2s ease",
@@ -69,20 +71,76 @@ export default {
       position: "relative",
       color: "primary",
       background: "transparent",
+      fontSize: "0.85rem",
       fontWeight: 500,
       display: "inline-block",
       padding: "0.9rem 1rem",
       borderRadius: "0px",
       letterSpacing: "0px",
       borderBottom: "2.5px solid hsl(42, 92%, 52%)",
-      padding: "0.15rem 0",
-      fontSize: "0.9rem",
       textTransform: "capitalize",
       transition: "all 0.2s ease",
 
       "&:hover": {
         color: "secondary",
       },
+
+      "&::before": {
+        content: "''",
+        position: "absolute",
+        width: "0%",
+        height: "2.5px",
+        bottom: "-2.5px",
+        left: "0",
+        backgroundColor: "primary",
+        transition: "all 0.2s ease-in-out",
+      },
+      "&:hover::before": {
+        width: "100%",
+      },
+    },
+  },
+
+  links: {
+    more: {
+      color: "primary",
+      fontSize: "0.85rem",
+      fontWeight: 600,
+      letterSpacing: 1,
+      transition: "0.2s ease-in-out",
+
+      "&:hover": {
+        textDecoration: "underline",
+        color: "secondary",
+      },
+    },
+  },
+
+  text: {
+    heading_primary: {
+      color: "title",
+      textTransform: "uppercase",
+      fontSize: "0.85rem",
+      letterSpacing: "1px",
+      borderLeft: "3px solid hsl(42, 92%, 52%)",
+      padding: "0.13rem 0.75rem",
+      marginBottom: "1rem",
+      fontWeight: 500,
+    },
+
+    heading_secondary: {
+      color: "subtitle",
+      fontSize: "3rem",
+      fontWeight: 500,
+      lineHeight: "1.3",
+    },
+
+    heading_paragraph: {
+      color: "text",
+      maxWidth: "440px",
+      fontSize: "0.85rem",
+      lineHeight: "2",
+      margin: "2rem 0",
     },
   },
 
@@ -112,4 +170,4 @@ export default {
     inner: "inset 0 2px 4px 0 rgba(0,0,0,0.06)",
     none: "none",
   },
-}
+};

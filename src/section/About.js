@@ -1,11 +1,11 @@
 import React from "react";
-import {Box, Container} from "theme-ui";
-import Info from "./subsection/ShowCase/Info";
-import ShowcaseImage from "./subsection/ShowCase/Image";
+import { Box, Container } from "theme-ui";
+import Info from "./subsection/About/Info";
+import Video from "./subsection/About/Video";
 
 const ShowCase = () => {
   return (
-    <Container as={"section"} id={"showcase"}>
+    <Container as={"section"} id={"about"}>
       <Box
         as={"div"}
         sx={{
@@ -17,8 +17,8 @@ const ShowCase = () => {
           alignItems: "center",
         }}
       >
-        <Info/>
-        <ShowcaseImage/>
+        <Video />
+        <Info />
       </Box>
     </Container>
   );

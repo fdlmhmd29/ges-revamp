@@ -1,6 +1,6 @@
-import { Box } from "theme-ui"
-import { useRouter } from "next/router"
-import { NavLink } from "../lib"
+import {Box} from "theme-ui";
+import {useRouter} from "next/router";
+import {NavLink} from "../lib";
 
 const data = [
   {
@@ -14,14 +14,14 @@ const data = [
     path: "/about",
   },
   {
-    id: 2,
+    id: 3,
     title: "Blog",
     path: "/posts",
   },
-]
+];
 
 const Links = (props) => {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <Box id="nav-links" as={"div"} sx={styles.links}>
@@ -41,8 +41,8 @@ const Links = (props) => {
         ))}
       </Box>
     </Box>
-  )
-}
+  );
+};
 
 const styles = {
   links: {
@@ -56,6 +56,6 @@ const styles = {
     alignItems: "center",
     width: "100%",
   },
-}
+};
 
-export default Links
+export default Links;
