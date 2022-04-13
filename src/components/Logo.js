@@ -1,9 +1,9 @@
-import { NavLink } from "theme-ui"
-import Link from "next/link"
-import Image from "next/image"
+import { NavLink } from "theme-ui";
+import Link from "next/link";
+import Image from "next/image";
 
 // Yellow
-import mainLogo from "../../public/img/logo.png"
+import mainLogo from "../../public/img/logo.png";
 
 const Logo = (props) => {
   return (
@@ -14,11 +14,12 @@ const Logo = (props) => {
           placeholder={"blur"}
           loading={"lazy"}
           src={mainLogo}
+          alt={"Logo Perusahaan PT Greenfield Environment Solution"}
         />
       </NavLink>
     </Link>
-  )
-}
+  );
+};
 
 const styles = {
   logo: {
@@ -30,6 +31,6 @@ const styles = {
     flexWrap: "wrap",
     transition: "all 0.3s ease-in-out",
   },
-}
+};
 
-export default Logo
+export default Logo;

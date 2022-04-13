@@ -4,6 +4,7 @@
   "version": "0.2.4",
   "scripts": {
     "dev": "next",
+    "lint": "next lint",
     "build": "next build",
     "start": "next start",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -31,6 +32,8 @@
     "theme-ui": "^0.13.1"
   },
   "devDependencies": {
+    "eslint": "8.13.0",
+    "eslint-config-next": "12.1.5",
     "onchange": "^7.1.0",
     "prettier": "^2.5.1"
   },
