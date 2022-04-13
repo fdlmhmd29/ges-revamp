@@ -1,5 +1,5 @@
 module.exports = {
-  url: "https://nextjs-mdx-blog-starter.vercel.app/",
+  url: "https://ges-revamp.vercel.app/",
   title: "Next.js MDX Blog Starter",
   subtitle: "Content authoring with MDX. Powered by Next.js.", // longDescription : appears in landing page meta description
   description:
@@ -11,4 +11,4 @@ module.exports = {
   postsPerPage: 8,
   showDate: true, // if you would like the date to appear on the blog posts
   disqus: "", // your disqus shortname, remove if you don't use disqus
-}
+};

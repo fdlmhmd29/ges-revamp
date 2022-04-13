@@ -1,8 +1,8 @@
-import { NavLink as A } from "theme-ui"
-import Link from "next/link"
+import { NavLink as A } from "theme-ui";
+import Link from "next/link";
 
 const NavLink = ({ href, active, children }) => (
-  <Link href={href}>
+  <Link href={href} passHref>
     <A
       sx={{
         position: "relative",
@@ -26,6 +26,6 @@ const NavLink = ({ href, active, children }) => (
       {children}
     </A>
   </Link>
-)
+);
 
-export default NavLink
+export default NavLink;
