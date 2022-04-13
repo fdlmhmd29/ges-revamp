@@ -93,7 +93,7 @@ const styles = {
       display: "block",
       width: ["60px", null, "80px", null, "100px"],
       height: ["60px", null, "80px", null, "100px"],
-      backgroundColor: "primary",
+      backgroundColor: "secondary",
       borderRadius: "50%",
       animation: `${playPulse} 1.5s ease-out infinite`,
       opacity: 0.5,

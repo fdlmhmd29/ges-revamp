@@ -144,7 +144,7 @@ export default {
     },
 
     heading_secondary: {
-      color: "subtitle",
+      color: "text",
       fontSize: "3rem",
       fontWeight: 500,
       lineHeight: "1.3",
@@ -156,6 +156,44 @@ export default {
       fontSize: "0.85rem",
       lineHeight: "2",
       margin: "2rem 0",
+    },
+  },
+
+  section: {
+    primary: {
+      py: "1.875rem",
+    },
+
+    secondary: {
+      pb: "1.875rem",
+    },
+  },
+
+  sectionHeader: {
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginBottom: "3rem",
+
+    title: {
+      fontSize: ["24px", null, "28px", null, null, "32px", null, "36px"],
+      color: "heading_secondary",
+      lineHeight: [1.3, null, null, 1.2],
+      textAlign: "center",
+      fontWeight: "700",
+      mb: "0.75rem",
+      letterSpacing: "1px",
+    },
+
+    subtitle: {
+      fontSize: [0, null, "0.85rem"],
+      color: "text",
+      textAlign: "center",
+      letterSpacing: [".5px", null, "1px"],
+
+      width: "50%",
+      lineHeight: 2,
     },
   },
 

@@ -5,13 +5,13 @@ import MoreLink from "./MoreLink";
 const Info = (props) => {
   return (
     <Box id="showcase__info" as={"div"}>
-      <Heading id="showcase__title" as={"h3"} variant={"heading_primary"}>
+      <Heading id="title" as={"h3"} variant={"heading_primary"}>
         {props.title}
       </Heading>
-      <Heading id="showcase__subtitle" as={"h1"} variant={"heading_secondary"}>
+      <Heading id="subtitle" as={"h1"} variant={"heading_secondary"}>
         {props.subtitle}
       </Heading>
-      <Text id="showcase__caption" as={"p"} variant={"heading_paragraph"}>
+      <Text id="caption" as={"p"} variant={"heading_paragraph"}>
         {props.text}
       </Text>
       <Box id="showcase__cta" as={"div"} sx={styles.cta}>

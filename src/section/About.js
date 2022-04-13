@@ -5,7 +5,7 @@ import Video from "../components/Video";
 
 const ShowCase = () => {
   return (
-    <Container as={"section"} id={"about"}>
+    <Container as={"section"} id={"about"} variant={"section.secondary"}>
       <Box
         as={"div"}
         sx={{
@@ -18,6 +18,7 @@ const ShowCase = () => {
         }}
       >
         <Video />
+
         <Info
           title={"Tentang Kami"}
           subtitle={"PT Greenfield Environment Solution"}
