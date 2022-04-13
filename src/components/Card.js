@@ -4,10 +4,10 @@ import Image from "next/image";
 //Yellow
 import MoreLink from "./MoreLink";
 
-const Card = ({ icon, href, heading, text, link }) => (
+const Card = ({ icon, href, heading, text, link, alt }) => (
   <Link as={"a"} href={href} sx={styles.card}>
     <Box as={"div"} id={"card-body"} sx={{ padding: "24px" }}>
-      <Image src={icon} width={100} height={100} />
+      <Image src={icon} width={100} height={100} loading={"lazy"} alt={alt} />
       <Heading as={"h4"} sx={{ pb: "12px", pt: "12px", color: "text" }}>
         {heading}
       </Heading>

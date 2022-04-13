@@ -115,6 +115,7 @@ const Services = () => (
             heading={item.heading}
             text={item.text}
             link={item.link}
+            alt={item.heading}
           />
         ))}
       </Grid>
