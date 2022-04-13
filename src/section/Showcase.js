@@ -1,7 +1,7 @@
 import React from "react";
-import {Box, Container} from "theme-ui";
-import Info from "./subsection/ShowCase/Info";
-import ShowcaseImage from "./subsection/ShowCase/Image";
+import { Box, Container } from "theme-ui";
+import Info from "../components/Info";
+import ShowcaseImage from "../components/Image";
 
 const ShowCase = () => {
   return (
@@ -17,8 +17,17 @@ const ShowCase = () => {
           alignItems: "center",
         }}
       >
-        <Info/>
-        <ShowcaseImage/>
+        <Info
+          title={"Penyedia jasa pengurusan"}
+          subtitle={"Layanan Konsultasi Lingkungan"}
+          text={
+            "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, kami akan membantu Anda untuk menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis."
+          }
+          variant={"cta"}
+          href={"mailto:pt.greenfield@gmail.com"}
+          link={"Hubungi kami"}
+        />
+        <ShowcaseImage />
       </Box>
     </Container>
   );

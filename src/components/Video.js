@@ -3,12 +3,11 @@ import { Box, Button } from "theme-ui";
 import { IoIosPlay } from "react-icons/io";
 import { keyframes } from "@emotion/react";
 import Image from "next/image";
-import dynamic from "next/dynamic";
 
 //Yellow
-import section2 from "../../../../public/assets/svg/section2.svg";
-import Modal, { CloseButton } from "../../../components/Modal";
-import ResponsiveIframe from "../../../components/ResponsiveIframe";
+import section2 from "../../public/assets/svg/section2.svg";
+import Modal, { CloseButton } from "./Modal";
+import ResponsiveIframe from "./ResponsiveIframe";
 
 const Video = () => {
   const [isOpen, setIsOpen] = useState(false);

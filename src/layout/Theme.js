@@ -4,7 +4,6 @@ export default {
   useColorSchemeMediaQuery: true,
 
   fonts: {
-    body: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif`,
     heading: "inherit",
   },
 
@@ -110,8 +109,24 @@ export default {
       transition: "0.2s ease-in-out",
 
       "&:hover": {
-        textDecoration: "underline",
         color: "secondary",
+      },
+    },
+
+    cta: {
+      background: "primary",
+      color: "white",
+      display: "inline-block",
+      padding: "0.9rem 1rem",
+      borderRadius: "5px",
+      fontSize: "0.85rem",
+      fontWeight: 600,
+      letterSpacing: "0.4px",
+      textTransform: "capitalize",
+      transition: "all 0.2s ease",
+
+      "&:hover": {
+        background: "primaryHover",
       },
     },
   },

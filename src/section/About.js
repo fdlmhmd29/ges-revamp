@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Container } from "theme-ui";
-import Info from "./subsection/About/Info";
-import Video from "./subsection/About/Video";
+import Info from "../components/Info";
+import Video from "../components/Video";
 
 const ShowCase = () => {
   return (
@@ -18,7 +18,16 @@ const ShowCase = () => {
         }}
       >
         <Video />
-        <Info />
+        <Info
+          title={"Tentang Kami"}
+          subtitle={"PT Greenfield Environment Solution"}
+          text={
+            "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, kami akan membantu Anda untuk menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis."
+          }
+          href={"/"}
+          variant={"more"}
+          link={"Selengkapnya"}
+        />
       </Box>
     </Container>
   );

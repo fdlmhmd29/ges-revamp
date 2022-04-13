@@ -1,15 +1,15 @@
-import {Box} from "theme-ui";
+import { Box } from "theme-ui";
 import Image from "next/image";
 
 //Yellow
-import section1 from "../../../../public/assets/svg/section1.svg";
+import section1 from "../../public/assets/svg/section1.svg";
 
 const ShowcaseImage = () => {
   return (
     <Box
       className={"showcase__image"}
       as={"div"}
-      sx={{display: "flex", justifyContent: "flex-end"}}
+      sx={{ display: "flex", justifyContent: "flex-end" }}
     >
       <Image
         src={section1}
