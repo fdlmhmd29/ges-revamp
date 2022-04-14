@@ -29,10 +29,10 @@ const styles = {
     backgroundColor: "white",
     borderRadius: "12px",
     boxShadow: "rgba(149, 157, 165, 0.1) 0px 8px 24px",
-    transition: "all 0.2s ease-in-out",
+    transition: "transform .2s",
 
     "&:hover": {
-      backgroundColor: "hsl(106, 100%, 95%)",
+      transform: "scale(1.04)",
     },
   },
 };

@@ -218,6 +218,7 @@ const Style = (props) => (
     header.scrolled {
       background-color: hsla(256, 100%, 97%, 0.8);
       box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.03);
+      -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
     }
 
