@@ -5,7 +5,7 @@ const Help = () => (
   <Container
     as={"section"}
     id={"help-section"}
-    sx={{ textAlign: "center !important" }}
+    sx={{ textAlign: "center !important", py: "1.875rem" }}
   >
     <Box
       as={"div"}
@@ -31,7 +31,8 @@ const Help = () => (
           id={"help-link"}
           as={"a"}
           href={"mailto:pt.greenfield@gmail.com"}
-          sx={{ pl: 2, fontWeight: 500 }}
+          sx={{ pl: 2 }}
+          variant={"more"}
         >
           Konsultasikan dengan kami!
         </Link>
