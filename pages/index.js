@@ -4,6 +4,7 @@ import Wrapper from "../src/layout/Wrapper";
 import ShowCase from "../src/section/Showcase";
 import About from "../src/section/About";
 import Services from "../src/section/Services";
+import Help from "../src/components/Help";
 
 const PostsPage = () => (
   <Wrapper
@@ -20,6 +21,7 @@ const PostsPage = () => (
       <ShowCase />
       <About />
       <Services />
+      <Help />
     </Container>
   </Wrapper>
 );

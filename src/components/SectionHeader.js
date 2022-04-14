@@ -6,7 +6,7 @@ const SectionHeader = ({ title, slogan, isWhite }) => (
       as={"h2"}
       id={"subtitle"}
       variant={"sectionHeader.title"}
-      sx={{ color: isWhite ? "primary" : "text" }}
+      sx={{ color: isWhite ? "primary" : "text", width: "50%" }}
     >
       {title}
     </Heading>

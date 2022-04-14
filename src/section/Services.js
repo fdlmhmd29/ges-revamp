@@ -19,7 +19,7 @@ const data = [
     id: 1,
     icon: icon1,
     href: "/",
-    heading: "Penyusunan Laporan Monitoring",
+    heading: "Penyusunan Laporan Monitoring Lingkungan Hidup",
     text: "Laporan Monitoring Kegiatan Pengelolaan dan Pemantauan Lingkungan",
     link: "/",
   },
@@ -27,8 +27,8 @@ const data = [
     id: 2,
     icon: icon2,
     href: "/",
-    heading: "Perencanaan dan Pembangunan IPAL",
-    text: "Perencanaan dan Pembangunan Installasi guna Pembuangan Air Limbah",
+    heading: "Perencanaan dan Pembangunan IP Air Limbah",
+    text: "Perancangan dan Pembangunan Installasi Pengolahan Air Limbah secara komunal",
     link: "/",
   },
   {
@@ -36,7 +36,7 @@ const data = [
     icon: icon3,
     href: "/",
     heading: "Persetujuan Teknis Emisi Gas Buang",
-    text: "Persetujuan Teknis Pengelolaan lingkungan untuk Emisi Gas Buang",
+    text: "Persetujuan Teknis kajian pembuangan emisi pengelolaan lingkungan untuk Emisi Gas Buang",
     link: "/",
   },
   {
@@ -98,7 +98,7 @@ const data = [
 ];
 
 const Services = () => (
-  <Container as={"section"} id={"service-section"} variant={"section.primary"}>
+  <Container as={"section"} id={"service-section"} sx={{ py: "1.875rem" }}>
     <Box as={"div"} sx={{}}>
       <SectionHeader
         title={"Jasa Perizinan dan Konsultasi Lingkungan"}

@@ -113,6 +113,18 @@ export default {
       },
     },
 
+    card: {
+      color: "primary",
+      fontSize: "0.75rem",
+      fontWeight: 400,
+      letterSpacing: 1,
+      transition: "0.2s ease-in-out",
+
+      "&:hover": {
+        color: "secondary",
+      },
+    },
+
     cta: {
       background: "primary",
       color: "white",
@@ -161,11 +173,11 @@ export default {
 
   section: {
     primary: {
-      py: "1.875rem",
+      pb: "1.875rem",
     },
 
     secondary: {
-      pb: "1.875rem",
+      py: "1.875rem",
     },
   },
 
