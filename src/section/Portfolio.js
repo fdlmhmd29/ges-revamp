@@ -8,94 +8,124 @@ import Buttons from "./data/Portfolio";
 import Cards from "./data/CardData";
 import MoreLink from "../components/MoreLink";
 
-const Portfolio = () => (
-  <Container id={"portfolio-section"} as={"section"} sx={{ py: "1.875rem" }}>
-    <Box id={"portfolio-container"} as={"div"}>
-      <Flex
-        id={"portfolio-header"}
-        as={"div"}
-        sx={{
-          alignItems: "flex-end",
-          justifyContent: "space-between",
-          marginBottom: "4rem",
-        }}
-      >
-        <Box id={"portfolio-title"} as={"div"} sx={{ paddingBottom: "1rem" }}>
-          <Heading
-            id={"portfolio-subheading"}
-            as={"h3"}
-            variant={"heading_primary"}
-          >
-            Subheading
-          </Heading>
-          <Heading id={"subtitle"} as={"h1"} variant={"heading_secondary"}>
-            Heading
-          </Heading>
-        </Box>
+const Portfolio = ({ posts, prevPorto, nextPorto }) => {
+  const isLocal = process.env.NODE_ENV === "development";
 
-        <Box id={"portfolio-filter-button-container"}>
-          {Buttons.map((item) => (
-            <Button
-              key={item.id}
-              id={item.id}
-              variant={"filter"}
-              text={item.text}
-            />
-          ))}
-        </Box>
-      </Flex>
-
-      <Grid
-        id={"portfolio-gallery"}
-        as={"div"}
-        gap={3}
-        sx={{ gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}
-      >
-        {Cards.map((item) => (
-          <Card
-            key={item.id}
-            sx={{
-              borderRadius: "10px",
-              boxShadow: "rgba(149, 157, 165, 0.1) 0px 8px 24px",
-              overflow: "hidden",
-              backgroundColor: "white",
-              height: "265px",
-              display: "grid",
-              gridTemplateRows: "1fr auto",
-            }}
-          >
-            <Box as={"div"} sx={styles.image}>
-              <Image src={item.image} alt={item.id} className={"card-image"} />
-              <Flex as={"div"} id={"overlay"} sx={styles.overlay}>
-                <Flex as={"span"} id={"icons"} sx={styles.icons}>
-                  <UilEye size={25} />
-                </Flex>
-                <Link as={"a"} href={"/"} id={"icons"} sx={styles.icons}>
-                  <UilLinkAlt size={25} />
-                </Link>
-              </Flex>
-            </Box>
-            <Flex
-              sx={{ padding: "1.1rem 1.6rem", justifyContent: "space-between" }}
+  return (
+    <Container id={"portfolio-section"} as={"section"} sx={{ py: "1.875rem" }}>
+      <Box id={"portfolio-container"} as={"div"}>
+        <Flex
+          id={"portfolio-header"}
+          as={"div"}
+          sx={{
+            alignItems: "flex-end",
+            justifyContent: "space-between",
+            marginBottom: "4rem",
+          }}
+        >
+          <Box id={"portfolio-title"} as={"div"} sx={{ paddingBottom: "1rem" }}>
+            <Heading
+              id={"portfolio-subheading"}
+              as={"h3"}
+              variant={"heading_primary"}
             >
-              <Heading
-                as={"h3"}
-                sx={{
-                  fontSize: "0.875rem",
-                  fontWeight: 600,
-                  textTransform: "capitalized",
-                }}
-              >
-                {item.heading}
-              </Heading>
-              <MoreLink href={item.href} variant={"more"} text={item.text} />
-            </Flex>
-          </Card>
-        ))}
-      </Grid>
-    </Box>
-  </Container>
-);
+              Subheading
+            </Heading>
+            <Heading id={"subtitle"} as={"h1"} variant={"heading_secondary"}>
+              Portfolio
+            </Heading>
+          </Box>
+
+          <Box id={"portfolio-filter-button-container"}>
+            {Buttons.map((item) => (
+              <Button
+                key={item.id}
+                id={item.id}
+                variant={"filter"}
+                text={item.text}
+              />
+            ))}
+          </Box>
+        </Flex>
+
+        <Grid
+          id={"portfolio-gallery"}
+          as={"div"}
+          gap={3}
+          sx={{ gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))" }}
+        >
+          {posts &&
+            posts
+              .filter((item) => {
+                return isLocal || !item.draft;
+              })
+              .map((item) => (
+                <Card
+                  key={item.id}
+                  sx={{
+                    borderRadius: "10px",
+                    boxShadow: "rgba(149, 157, 165, 0.1) 0px 8px 24px",
+                    overflow: "hidden",
+                    backgroundColor: "white",
+                    height: "265px",
+                    display: "grid",
+                    gridTemplateRows: "1fr auto",
+                  }}
+                >
+                  {item.coverImage && (
+                    <Box as={"div"} sx={styles.image}>
+                      <Image
+                        height={600}
+                        width={item.coverImageWidth}
+                        src={item.coverImage}
+                        alt={item.coverImageAlt || ""}
+                        className={"card-image"}
+                      />
+                      <Flex as={"div"} id={"overlay"} sx={styles.overlay}>
+                        <Flex as={"span"} id={"icons"} sx={styles.icons}>
+                          <UilEye size={25} />
+                        </Flex>
+                        <Link
+                          as={"a"}
+                          href={"/" + item.slug}
+                          id={"icons"}
+                          sx={styles.icons}
+                        >
+                          <UilLinkAlt size={25} />
+                        </Link>
+                      </Flex>
+                    </Box>
+                  )}
+
+                  <Flex
+                    sx={{
+                      padding: "1.1rem 1.6rem",
+                      justifyContent: "space-between",
+                    }}
+                  >
+                    <Heading
+                      as={"h3"}
+                      sx={{
+                        fontSize: "0.875rem",
+                        fontWeight: 600,
+                        textTransform: "capitalized",
+                      }}
+                    >
+                      {item.title}
+                    </Heading>
+                    <MoreLink
+                      href={"/" + item.slug}
+                      variant={"more"}
+                      text={"Selengkapnya"}
+                    />
+                  </Flex>
+                </Card>
+              ))}
+        </Grid>
+      </Box>
+    </Container>
+  );
+};
 
 const styles = {
   icons: {

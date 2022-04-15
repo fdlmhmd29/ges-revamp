@@ -1,4 +1,5 @@
 import { Container } from "theme-ui";
+import { getAllPosts } from "../src/api";
 import config from "../blog.config";
 import Wrapper from "../src/layout/Wrapper";
 import ShowCase from "../src/section/Showcase";
@@ -7,7 +8,7 @@ import Services from "../src/section/Services";
 import Help from "../src/components/Help";
 import Portfolio from "../src/section/Portfolio";
 
-const PostsPage = () => (
+const PostsPage = ({ posts }) => (
   <Wrapper
     url={config.url}
     title={config.title}
@@ -23,9 +24,33 @@ const PostsPage = () => (
       <About />
       <Services />
       <Help />
-      <Portfolio />
+      <Portfolio posts={posts} />
     </Container>
   </Wrapper>
 );
+
+export async function getStaticProps() {
+  const posts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "coverImage",
+    "coverImageAlt",
+    "coverImageHeight",
+    "coverImageWidth",
+    "excerpt",
+    "draft",
+  ]);
+
+  const startIndex = 0;
+  const endIndex = config.postsPerPage;
+  const prevPosts = null;
+  const nextPosts = endIndex >= posts.length ? null : 2;
+
+  return {
+    props: { posts: posts.slice(startIndex, endIndex), prevPosts, nextPosts },
+  };
+}
 
 export default PostsPage;
