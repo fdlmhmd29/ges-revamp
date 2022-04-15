@@ -206,6 +206,11 @@ const Style = (props) => (
       font-family: "Abril Fatface", cursive;
     }
 
+    .card-image {
+      border-radius: 10px;
+      width: 105%;
+    }
+
     header {
       position: fixed;
       top: 0;

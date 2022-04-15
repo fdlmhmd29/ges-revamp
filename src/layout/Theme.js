@@ -66,6 +66,21 @@ export default {
       },
     },
 
+    filter: {
+      display: "inline-block",
+      color: "primary",
+      background: "none",
+      outline: "none",
+      border: "none",
+      padding: null,
+      fontSize: "0.875rem",
+      fontWeight: 600,
+      letterSpacing: "0.4px",
+      marginLeft: "0.3rem",
+      fontFamily: "inherit",
+      textTransform: "uppercase",
+    },
+
     secondary: {
       position: "relative",
       color: "primary",

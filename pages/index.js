@@ -5,6 +5,7 @@ import ShowCase from "../src/section/Showcase";
 import About from "../src/section/About";
 import Services from "../src/section/Services";
 import Help from "../src/components/Help";
+import Portfolio from "../src/section/Portfolio";
 
 const PostsPage = () => (
   <Wrapper
@@ -22,6 +23,7 @@ const PostsPage = () => (
       <About />
       <Services />
       <Help />
+      <Portfolio />
     </Container>
   </Wrapper>
 );
