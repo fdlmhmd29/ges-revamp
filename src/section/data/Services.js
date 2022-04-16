@@ -18,7 +18,7 @@ const data = [
     href: "/",
     heading: "Penyusunan Laporan Monitoring Lingkungan Hidup",
     text: "Laporan Monitoring Kegiatan Pengelolaan dan Pemantauan Lingkungan",
-    link: "/",
+    className: "mix monitoring",
   },
   {
     id: 2,
@@ -26,7 +26,7 @@ const data = [
     href: "/",
     heading: "Perencanaan dan Pembangunan IP Air Limbah",
     text: "Perancangan dan Pembangunan Installasi Pengolahan Air Limbah secara komunal",
-    link: "/",
+    className: "mix installasi",
   },
   {
     id: 3,
@@ -34,7 +34,7 @@ const data = [
     href: "/",
     heading: "Persetujuan Teknis Emisi Gas Buang",
     text: "Persetujuan Teknis kajian pembuangan emisi pengelolaan lingkungan untuk Emisi Gas Buang",
-    link: "/",
+    className: "mix pertek",
   },
   {
     id: 4,
@@ -42,7 +42,7 @@ const data = [
     href: "/",
     heading: "Persetujuan Teknis Pengelolaan B3",
     text: "Persetujuan teknis pengelolaan, pemanfaatan atau pengarahan limbah B3",
-    link: "/",
+    className: "mix pertek",
   },
   {
     id: 5,
@@ -50,7 +50,7 @@ const data = [
     href: "/",
     heading: "Persetujuan Teknis Pemanfaatan B3",
     text: "Persetujuan teknis pembuangan atau pemanfaatan serta pengolahan limbah B3",
-    link: "/",
+    className: "mix pertek",
   },
   {
     id: 6,
@@ -58,7 +58,7 @@ const data = [
     href: "/",
     heading: "Rencana Pengelolaan dan Pemantauan Rinci",
     text: "Rencana Pengelolaan dan Pemantauan Lingkungan Hidup (RKL-RPL) Rinci",
-    link: "/",
+    className: "mix rkl-rpl",
   },
   {
     id: 7,
@@ -66,7 +66,7 @@ const data = [
     href: "/",
     heading: "Studi Analisa Mengenai Dampak Lingkungan",
     text: "Kajian mengenai dampak besar dari kegiatan suatu usaha terhadap lingkungan hidup",
-    link: "/",
+    className: "mix studi",
   },
   {
     id: 8,
@@ -74,7 +74,7 @@ const data = [
     href: "/",
     heading: "Studi Dokumen Evaluasi Lingkungan Hidup",
     text: "Kajian Dokumen Evaluasi Dampak Lingkungan Hidup bagi Kegiatan Usaha yang Sudah Berjalan",
-    link: "/",
+    className: "mix studi",
   },
   {
     id: 9,
@@ -82,7 +82,7 @@ const data = [
     href: "/",
     heading: "Studi Dokumen Pengelolaan Lingkungan Hidup",
     text: "Bagi kegiatan usaha yang sudah atau bahkan belum memiliki izin usaha dan UKL-UPL",
-    link: "/",
+    className: "mix studi",
   },
   {
     id: 10,
@@ -90,7 +90,7 @@ const data = [
     href: "/",
     heading: "Studi Upaya Pengelolaan dan Pemantauan",
     text: "Bagi usaha dan/ atau kegiatan yang tidak berdampak penting terhadap lingkungan hidup",
-    link: "/",
+    className: "mix studi",
   },
 ];
 

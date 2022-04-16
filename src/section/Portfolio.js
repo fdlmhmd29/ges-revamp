@@ -43,6 +43,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                 id={item.id}
                 variant={"filter"}
                 text={item.text}
+                filter={item.filter}
               />
             ))}
           </Box>
@@ -62,6 +63,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
               .map((item) => (
                 <Card
                   key={item.id}
+                  className={item.classes}
                   sx={{
                     borderRadius: "10px",
                     boxShadow: "rgba(149, 157, 165, 0.1) 0px 8px 24px",
@@ -73,7 +75,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                   }}
                 >
                   {item.coverImage && (
-                    <Box as={"div"} sx={styles.image}>
+                    <Box as={"div"} sx={styles.image} key={item.id}>
                       <Image
                         height={600}
                         width={item.coverImageWidth}

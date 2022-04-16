@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { GrClose } from "react-icons/gr";
 import ReactModal from "react-modal";
+import { Button, Close } from "theme-ui";
 // import './modal.module.css';
 
 const customStyles = {
@@ -48,9 +48,9 @@ export default Modal;
 
 export const CloseButton = ({ onClick, size, color, ...props }) => {
   return (
-    <button sx={styles.button} onClick={onClick} {...props}>
-      <GrClose size={size ?? "24px"} color={color ?? color} />
-    </button>
+    <Button sx={styles.button} onClick={onClick} {...props}>
+      <Close />
+    </Button>
   );
 };
 

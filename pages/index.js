@@ -31,6 +31,8 @@ const PostsPage = ({ posts }) => (
 
 export async function getStaticProps() {
   const posts = getAllPosts([
+    "id",
+    "classes",
     "title",
     "date",
     "slug",
@@ -44,7 +46,7 @@ export async function getStaticProps() {
   ]);
 
   const startIndex = 0;
-  const endIndex = config.postsPerPage;
+  const endIndex = config.portosPerPage;
   const prevPosts = null;
   const nextPosts = endIndex >= posts.length ? null : 2;
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Button } from "theme-ui";
-import { IoIosPlay } from "react-icons/io";
+import { UilPlay } from "@iconscout/react-unicons";
 import { keyframes } from "@emotion/react";
 import Image from "next/image";
 
@@ -31,7 +31,7 @@ const Video = () => {
         aria-label="Play Button"
       >
         <span>
-          <IoIosPlay />
+          <UilPlay size={50} />
         </span>
       </Button>
       <Modal isOpen={isOpen}>
