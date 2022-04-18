@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid } from "theme-ui";
+import { Box, Button, Container, Grid, Text } from "theme-ui";
 import React, { useState, useEffect } from "react";
 
 // Yellow
@@ -73,19 +73,20 @@ function Services() {
           className="service_filter__buttons"
           sx={styles.scrollMenu}
         >
-          {category.map((c) => (
-            <Button
-              as={"div"}
-              id={c.name}
-              type="button"
-              key={c.id}
-              className={`service_label ${filter === c.name ? "active" : ""}`}
-              onClick={() => setFilter(c.name)}
-              sx={styles.scrollMenu__button}
-            >
-              {c.title}
-            </Button>
-          ))}
+          <Box as={"div"}>
+            {category.map((c) => (
+              <Text
+                as={"p"}
+                id={c.name}
+                key={c.id}
+                className={`service_label ${filter === c.name ? "active" : ""}`}
+                onClick={() => setFilter(c.name)}
+                sx={styles.scrollMenu__button}
+              >
+                {c.title}
+              </Text>
+            ))}
+          </Box>
         </Box>
 
         {/* Portfolio Cards */}
@@ -101,6 +102,7 @@ function Services() {
                 text={item.text}
                 link={item.link}
                 alt={item.heading}
+                sx={styles.card}
               />
             ) : null
           )}
@@ -115,19 +117,35 @@ const styles = {
     backgroundColor: "transparent",
     overflow: "auto",
     whiteSpace: "nowrap",
+    textAlign: "center",
+    marginBottom: "1.25rem",
   },
 
   scrollMenu__button: {
     display: "inline-block",
+    padding: "0.25rem 0.5rem",
     cursor: "pointer",
+    fontSize: "0.875rem",
+    // textTransform: "uppercase",
+    color: "text",
+    fontWeight: 500,
+    letterSpacing: "0.050rem",
+    transition: "all 0.3s ease",
 
     "&:hover": {
-      backgroundColor: "gray.100",
+      color: "secondary",
     },
 
     "&.active": {
-      backgroundColor: "white",
-      color: "primary",
+      backgroundColor: "primary",
+      color: "white",
+      padding: "0.25rem 0.5rem",
+      borderRadius: "5px",
+      transition: "all 0.3s ease",
+
+      "&:hover": {
+        backgroundColor: ["primary", "hsl(108, 100%, 26%)"],
+      },
     },
   },
 };

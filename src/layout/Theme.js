@@ -202,7 +202,7 @@ export default {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginBottom: "3rem",
+    marginBottom: "1rem",
 
     title: {
       fontSize: ["24px", null, "28px", null, null, "32px", null, "36px"],
