@@ -71,7 +71,7 @@ function Services() {
         <Box
           as={"div"}
           className="service_filter__buttons"
-          sx={styles.filterContainer}
+          sx={styles.scrollMenu}
         >
           {category.map((c) => (
             <Button
@@ -81,7 +81,7 @@ function Services() {
               key={c.id}
               className={`service_label ${filter === c.name ? "active" : ""}`}
               onClick={() => setFilter(c.name)}
-              sx={styles.filterButton}
+              sx={styles.scrollMenu__button}
             >
               {c.title}
             </Button>
@@ -111,24 +111,20 @@ function Services() {
 }
 
 const styles = {
-  filterContainer: {
+  scrollMenu: {
     backgroundColor: "transparent",
-    borderRadius: "0.25rem",
-    padding: "1rem",
-    display: "flex",
-    justifyContent: "space-around",
-    alignItems: "center",
-    flexWrap: "wrap",
+    overflow: "auto",
+    whiteSpace: "nowrap",
   },
 
-  filterButton: {
-    fontSize: "1.125rem",
-    fontWeight: "600",
-    color: "white",
+  scrollMenu__button: {
+    display: "inline-block",
     cursor: "pointer",
+
     "&:hover": {
       backgroundColor: "gray.100",
     },
+
     "&.active": {
       backgroundColor: "white",
       color: "primary",
