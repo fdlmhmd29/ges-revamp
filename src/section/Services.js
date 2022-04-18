@@ -58,8 +58,12 @@ function Services() {
   }, [filter]);
 
   return (
-    <Container as={"section"} id={"service-section"} sx={{ py: "1.875rem" }}>
-      <Box as={"div"} sx={{}}>
+    <Container
+      as={"section"}
+      id={"service-section"}
+      sx={{ py: "5rem !important" }}
+    >
+      <Box as={"div"}>
         <SectionHeader
           title={"Jasa Perizinan dan Konsultasi Lingkungan"}
           slogan={
@@ -102,7 +106,6 @@ function Services() {
                 text={item.text}
                 link={item.link}
                 alt={item.heading}
-                sx={styles.card}
               />
             ) : null
           )}

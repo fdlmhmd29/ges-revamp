@@ -5,11 +5,10 @@ import Image from "next/image";
 import MoreLink from "./MoreLink";
 import { number } from "prop-types";
 
-const Card = ({
+const SolutionCard = ({
   icon = "",
   href = "",
   heading = "",
-  text = "",
   id = number,
   link = "",
   alt = "",
@@ -24,13 +23,8 @@ const Card = ({
       >
         {heading}
       </Heading>
-      {text && (
-        <Text as={"p"} sx={{ color: "text", fontSize: "0.75rem" }}>
-          {text}
-        </Text>
-      )}
     </Box>
-    <Box as={"div"} sx={{ px: "24px", pt: null, pb: "16px" }}>
+    <Box as={"div"} sx={{ pb: "16px" }}>
       <MoreLink href={link} text={"Selengkapnya"} variant={"card"} />
     </Box>
   </Link>
@@ -49,4 +43,4 @@ const styles = {
   },
 };
 
-export default Card;
+export default SolutionCard;

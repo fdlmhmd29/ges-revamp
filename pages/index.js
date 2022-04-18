@@ -7,6 +7,7 @@ import About from "../src/section/About";
 import Services from "../src/section/Services";
 import Help from "../src/components/Help";
 import Portfolio from "../src/section/Portfolio";
+import Solution from "../src/section/Solution";
 
 const PostsPage = ({ posts }) => (
   <Wrapper
@@ -21,6 +22,7 @@ const PostsPage = ({ posts }) => (
       sx={{ width: "100%", overflow: "hidden", padding: "120px 0 0 0" }}
     >
       <ShowCase />
+      <Solution />
       <About />
       <Services />
       <Help />

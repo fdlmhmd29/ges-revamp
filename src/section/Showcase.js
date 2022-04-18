@@ -5,7 +5,7 @@ import ShowcaseImage from "../components/Image";
 
 const ShowCase = () => {
   return (
-    <Container as={"section"} id={"showcase"}>
+    <Container as={"section"} id={"showcase"} sx={{ pb: "5rem !important" }}>
       <Box
         as={"div"}
         sx={{

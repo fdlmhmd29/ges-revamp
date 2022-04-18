@@ -5,7 +5,12 @@ import Video from "../components/Video";
 
 const ShowCase = () => {
   return (
-    <Container as={"section"} id={"about"} variant={"section.secondary"}>
+    <Container
+      as={"section"}
+      id={"about"}
+      variant={"section.secondary"}
+      sx={{ pb: "5rem !important" }}
+    >
       <Box
         as={"div"}
         sx={{

@@ -1,18 +1,24 @@
 import { Box, Heading, Text } from "theme-ui";
 
 const SectionHeader = ({ title, slogan, isWhite }) => (
-  <Box id={"section-header"} variant={"sectionHeader"}>
+  <Box id={"section-header"} variant={"sectionHeader"} sx={{ pb: "32px" }}>
     <Heading
       as={"h2"}
       id={"subtitle"}
       variant={"sectionHeader.title"}
-      sx={{ color: isWhite ? "primary" : "text", width: "50%" }}
+      sx={{
+        color: isWhite ? "primary" : "text",
+        width: "50%",
+        letterSpacing: "1px",
+      }}
     >
       {title}
     </Heading>
-    <Text as={"p"} variant={"sectionHeader.subtitle"}>
-      {slogan}
-    </Text>
+    {slogan && (
+      <Text as={"p"} variant={"sectionHeader.subtitle"}>
+        {slogan}
+      </Text>
+    )}
   </Box>
 );
 

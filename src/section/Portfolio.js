@@ -12,7 +12,11 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
   const isLocal = process.env.NODE_ENV === "development";
 
   return (
-    <Container id={"portfolio-section"} as={"section"} sx={{ py: "1.875rem" }}>
+    <Container
+      id={"portfolio-section"}
+      as={"section"}
+      sx={{ py: "5rem !important" }}
+    >
       <Box id={"portfolio-container"} as={"div"}>
         <Flex
           id={"portfolio-header"}
@@ -29,7 +33,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
               as={"h3"}
               variant={"heading_primary"}
             >
-              Subheading
+              Hasil Kerja Kami
             </Heading>
             <Heading id={"subtitle"} as={"h1"} variant={"heading_secondary"}>
               Portfolio
