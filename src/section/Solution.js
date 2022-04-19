@@ -5,17 +5,12 @@ import SolutionData from "./data/Solution";
 
 const Solution = () => {
   return (
-    <Container
-      className="solution-container"
-      id="solution-section"
-      sx={{ maxWidth: "50%", textAlign: "center" }}
-    >
+    <Container className="solution-container" id="solution-section" sx={{}}>
       <SectionHeader title={"Cakupan Kami"} />
-      <Grid
-        gap={3}
-        columns={[2, null, 3]}
+      <Flex
         as={"div"}
         id={"solution-card-container"}
+        sx={{ gap: "20px", justifyContent: "center" }}
       >
         {SolutionData.map((item) => (
           <SolutionCard
@@ -28,7 +23,7 @@ const Solution = () => {
             alt={item.heading}
           />
         ))}
-      </Grid>
+      </Flex>
     </Container>
   );
 };

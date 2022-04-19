@@ -34,6 +34,9 @@ import icon7 from "../../public/assets/svg/icon7.svg";
 import icon8 from "../../public/assets/svg/icon8.svg";
 import icon9 from "../../public/assets/svg/icon9.svg";
 import icon10 from "../../public/assets/svg/icon10.svg";
+import solution1 from "../../public/assets/svg/solution1.svg";
+import solution2 from "../../public/assets/svg/solution2.svg";
+import solution3 from "../../public/assets/svg/solution3.svg";
 
 export {
   icon1,
@@ -46,4 +49,7 @@ export {
   icon8,
   icon9,
   icon10,
+  solution1,
+  solution2,
+  solution3,
 };
