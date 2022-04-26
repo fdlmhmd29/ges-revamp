@@ -2,20 +2,22 @@ import React from "react";
 import { Box, Heading, Text } from "theme-ui";
 import MoreLink from "./MoreLink";
 
-const Info = (props) => {
+const Info = ({ title, subtitle, text, variant, link, href }) => {
   return (
     <Box id="showcase__info" as={"div"}>
       <Heading id="title" as={"h3"} variant={"heading_primary"}>
-        {props.title}
+        {title}
       </Heading>
       <Heading id="subtitle" as={"h1"} variant={"heading_secondary"}>
-        {props.subtitle}
+        {subtitle}
       </Heading>
-      <Text id="caption" as={"p"} variant={"heading_paragraph"}>
-        {props.text}
-      </Text>
+      {text && (
+        <Text id="caption" as={"p"} variant={"heading_paragraph"}>
+          {text}
+        </Text>
+      )}
       <Box id="showcase__cta" as={"div"} sx={styles.cta}>
-        <MoreLink href={props.href} text={props.link} variant={props.variant} />
+        <MoreLink href={href} text={link} variant={variant} />
       </Box>
     </Box>
   );

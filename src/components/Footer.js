@@ -1,7 +1,8 @@
-import { Box, Text } from "theme-ui"
+import { Box, Text } from "theme-ui";
 
 const Footer = (props) => (
   <Box
+    as={"footer"}
     sx={{
       p: 4,
       color: "#666",
@@ -22,6 +23,6 @@ const Footer = (props) => (
       Follow <a href="https://twitter.com/johnpolacek">@johnpolacek</a>
     </Text>
   </Box>
-)
+);
 
-export default Footer
+export default Footer;

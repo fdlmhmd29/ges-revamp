@@ -1,17 +1,17 @@
-import { ThemeProvider } from "theme-ui"
-import ReactGA from "react-ga"
+import { ThemeProvider } from "theme-ui";
+import ReactGA from "react-ga";
 
 // Yellow
-import Layout from "./Layout"
-import Theme from "./Theme"
-import config from "../../blog.config"
+import Layout from "./Layout";
+import Theme from "./Theme";
+import config from "../../blog.config";
 
 const Wrapper = (props) => {
   if (typeof config.analytics === "string" && config.analytics !== "") {
-    ReactGA.initialize(config.analytics)
-    ReactGA.set({ anonymizeIp: true })
+    ReactGA.initialize(config.analytics);
+    ReactGA.set({ anonymizeIp: true });
     if (typeof window !== "undefined") {
-      ReactGA.pageview(window.location.pathname + window.location.search)
+      ReactGA.pageview(window.location.pathname + window.location.search);
     }
   }
 
@@ -19,7 +19,7 @@ const Wrapper = (props) => {
     <ThemeProvider theme={Theme}>
       <Layout {...props} />
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Wrapper
+export default Wrapper;

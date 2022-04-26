@@ -58,64 +58,76 @@ function Services() {
   }, [filter]);
 
   return (
-    <Container
-      as={"section"}
-      id={"service-section"}
-      sx={{ py: "5rem !important" }}
-    >
-      <Box as={"div"}>
-        <SectionHeader
-          title={"Jasa Perizinan dan Konsultasi Lingkungan"}
-          slogan={
-            "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis."
-          }
-        />
+    <Box id="sertvices-container" as={"section"} sx={styles.container}>
+      <Container as={"section"}>
+        <Box as={"div"}>
+          <SectionHeader
+            title={"Jasa Perizinan dan Konsultasi Lingkungan"}
+            slogan={
+              "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
+            }
+          />
 
-        {/* Filter Buttons */}
-        <Box
-          as={"div"}
-          className="service_filter__buttons"
-          sx={styles.scrollMenu}
-        >
-          <Box as={"div"}>
-            {category.map((c) => (
-              <Text
-                as={"p"}
-                id={c.name}
-                key={c.id}
-                className={`service_label ${filter === c.name ? "active" : ""}`}
-                onClick={() => setFilter(c.name)}
-                sx={styles.scrollMenu__button}
-              >
-                {c.title}
-              </Text>
-            ))}
+          {/* Filter Buttons */}
+          <Box
+            as={"div"}
+            className="service_filter__buttons"
+            sx={styles.scrollMenu}
+          >
+            <Box as={"div"}>
+              {category.map((c) => (
+                <Text
+                  as={"p"}
+                  id={c.name}
+                  key={c.id}
+                  className={`service_label ${
+                    filter === c.name ? "active" : ""
+                  }`}
+                  onClick={() => setFilter(c.name)}
+                  sx={styles.scrollMenu__button}
+                >
+                  {c.title}
+                </Text>
+              ))}
+            </Box>
           </Box>
-        </Box>
 
-        {/* Portfolio Cards */}
-        <Grid gap={3} columns={[2, null, 4]} as={"div"} id={"card-container"}>
-          {portofolio.map((item) =>
-            item.filtered === true ? (
-              <Card
-                id={item.id}
-                key={item.id}
-                icon={item.icon}
-                href={item.href}
-                heading={item.heading}
-                text={item.text}
-                link={item.link}
-                alt={item.heading}
-              />
-            ) : null
-          )}
-        </Grid>
-      </Box>
-    </Container>
+          {/* Portfolio Cards */}
+          <Grid gap={3} columns={[2, null, 4]} as={"div"} id={"card-container"}>
+            {portofolio.map((item) =>
+              item.filtered === true ? (
+                <Card
+                  id={item.id}
+                  key={item.id}
+                  icon={item.icon}
+                  href={item.href}
+                  heading={item.heading}
+                  text={item.text}
+                  link={item.link}
+                  alt={item.heading}
+                />
+              ) : null
+            )}
+          </Grid>
+        </Box>
+      </Container>
+    </Box>
   );
 }
 
 const styles = {
+  container: {
+    py: "5rem !important",
+
+    background: "rgb(244,240,255)",
+    background: "rgb(244,240,255)",
+    background:
+      "-moz-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+    background:
+      "-webkit-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+    background:
+      "linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+  },
   scrollMenu: {
     backgroundColor: "transparent",
     overflow: "auto",

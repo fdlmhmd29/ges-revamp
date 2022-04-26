@@ -1,12 +1,16 @@
-import { Container, Flex, Grid } from "theme-ui";
+import { Container, Flex } from "theme-ui";
 import SectionHeader from "../components/SectionHeader";
 import SolutionCard from "../components/SolutionCard";
 import SolutionData from "./data/Solution";
 
 const Solution = () => {
   return (
-    <Container className="solution-container" id="solution-section" sx={{}}>
-      <SectionHeader title={"Cakupan Kami"} />
+    <Container
+      as={"section"}
+      className="solution-container"
+      id="solution-section"
+      sx={{ mb: "-4.5rem" }}
+    >
       <Flex
         as={"div"}
         id={"solution-card-container"}

@@ -1,11 +1,11 @@
-import { Container } from "theme-ui";
 import { getAllPosts } from "../src/api";
+import React, { lazy } from "react";
 import config from "../blog.config";
 import Wrapper from "../src/layout/Wrapper";
 import ShowCase from "../src/section/Showcase";
 import About from "../src/section/About";
 import Services from "../src/section/Services";
-import Help from "../src/components/Help";
+import Help from "../src/section/Help";
 import Portfolio from "../src/section/Portfolio";
 import Solution from "../src/section/Solution";
 
@@ -17,17 +17,12 @@ const PostsPage = ({ posts }) => (
     imageUrl={config.shareImage}
     imageAlt={config.shareImageAlt}
   >
-    <Container
-      id="section-container"
-      sx={{ width: "100%", overflow: "hidden", padding: "120px 0 0 0" }}
-    >
-      <ShowCase />
-      <Solution />
-      <About />
-      <Services />
-      <Help />
-      <Portfolio posts={posts} />
-    </Container>
+    <ShowCase />
+    <Solution />
+    <About />
+    <Services />
+    <Help />
+    <Portfolio posts={posts} />
   </Wrapper>
 );
 

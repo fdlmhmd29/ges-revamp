@@ -5,13 +5,14 @@ const Help = () => (
   <Container
     as={"section"}
     id={"help-section"}
-    sx={{ textAlign: "center !important", py: "1.875rem" }}
+    sx={{ textAlign: "center !important" }}
   >
     <Box
       as={"div"}
       id={"help-cta"}
       sx={{
         textAlign: "center !important",
+        backgroundColor: "#f4f0ff",
         fontSize: "0.875rem",
         letterSpacing: "0.5px",
         padding: "1rem !important",

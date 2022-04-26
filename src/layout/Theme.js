@@ -227,11 +227,7 @@ export default {
 
   layout: {
     container: {
-      position: "relative",
-      width: "100%",
-      maxWidth: "75rem",
-      padding: "0 1.5rem",
-      margin: "0 auto",
+      maxWidth: ["1110px"],
     },
   },
   space: [0, 4, 8, 16, 32, 64, 128],
