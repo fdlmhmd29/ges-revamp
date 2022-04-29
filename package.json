@@ -27,7 +27,7 @@
     "react-ga": "^3.3.0",
     "react-horizontal-scrolling-menu": "^2.7.1",
     "react-modal": "^3.14.4",
-    "theme-ui": "^0.13.1"
+    "theme-ui": "^0.14.2"
   },
   "devDependencies": {
     "eslint": "8.13.0",
