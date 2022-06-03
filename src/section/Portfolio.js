@@ -89,7 +89,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                       <MoreLink
                         href={"/" + item.slug}
                         variant={"more"}
-                        text={"Selengkapnya"}
+                        text={"Lihat"}
                       />
                     </Flex>
                   </Card>
