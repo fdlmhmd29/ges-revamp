@@ -13,11 +13,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
     <Box id={"portfolio-section"} as={"section"} sx={styles.container}>
       <Container id={"portfolio-section"}>
         <Box id={"portfolio-container"} as={"div"}>
-          <SectionHeader
-            title={"Portfolio"}
-            slogan={"Hasil kerja terbaru PT. Greenfield Environment Solution"}
-          />
-
+          <SectionHeader title={"Blog"} slogan={"Tulisan terbaru"} />
           <Grid
             id={"portfolio-gallery"}
             as={"div"}
@@ -51,7 +47,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                           height={600}
                           width={item.coverImageWidth}
                           src={item.coverImage}
-                          alt={item.coverImageAlt || ""}
+                          alt={item.coverImageAlt || "Blog Image"}
                           className={"card-image"}
                         />
                         <Flex as={"div"} id={"overlay"} sx={styles.overlay}>
@@ -135,7 +131,6 @@ const styles = {
     justifyContent: "center",
     alignItems: "center",
     position: "relative",
-    cursor: "pointer",
 
     "&:hover": {
       "#icons": {
