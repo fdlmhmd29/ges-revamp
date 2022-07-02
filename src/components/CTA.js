@@ -1,7 +1,7 @@
 import { keyframes } from "@emotion/react";
 import React, { useRef, useContext, useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import { Box, Button } from "theme-ui";
+import { Box, Button, Divider, Heading } from "theme-ui";
 
 const Context = React.createContext();
 
@@ -28,8 +28,12 @@ export function Modal({ onClose, children, ...props }) {
     ? ReactDOM.createPortal(
         <Box as={"div"} sx={styles.overlay}>
           <Box as={"div"} sx={styles.dialogue} {...props}>
+            <Heading>Kontak Kami</Heading>
+            <Divider />
             {children}
-            <Button onClick={onClose}>Close</Button>
+            <Box as={"div"} sx={{ pt: 20 }}>
+              <Button onClick={onClose}>Tutup</Button>
+            </Box>
           </Box>
         </Box>,
         modalNode
@@ -40,18 +44,19 @@ export function Modal({ onClose, children, ...props }) {
 const fadeIn = keyframes`from {opacity: 0;}`;
 const styles = {
   container: {
-    position: "relative",
+    // position: "relative",
     zIndex: 0,
   },
 
   overlay: {
-    animation: `${fadeIn} 200ms ease-out`,
+    animation: `${fadeIn} 200ms ease-in`,
     position: "absolute",
     top: 0,
     left: 0,
     width: "100vw",
     height: "100vh",
-    background: "rgba(0, 0, 0, 0.3)",
+    background: "rgba(0, 0, 0, 0.6)",
+    zIndex: 1,
   },
 
   dialogue: {

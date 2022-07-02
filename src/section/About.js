@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Container } from "theme-ui";
 import Info from "../components/Info";
 import Video from "../components/Video";
+import { UilCheckCircle } from "@iconscout/react-unicons";
 
 const ShowCase = () => {
   return (
@@ -22,7 +23,7 @@ const ShowCase = () => {
           <Video />
 
           <Info
-            title={"Tentang Kami"}
+            title={<UilCheckCircle />}
             subtitle={"PT Greenfield Environment Solution"}
             text={
               "PT. Greenfield Environment Solution berkomitmen untuk memberikan Layanan dan Jasa konsultasi lingkungan hidup profesional terbaik dengan metode yang tepat, efisien dan efektif dari berbagai aspek yang merupakan pondasi utama perusahaan kami."

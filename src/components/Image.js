@@ -9,7 +9,7 @@ const ShowcaseImage = () => {
     <Box
       className={"showcase__image"}
       as={"div"}
-      sx={{ display: "flex", justifyContent: "flex-end" }}
+      sx={{ display: "flex", justifyContent: "flex-end", zIndex: "-1" }}
     >
       <Image
         src={section1}

@@ -25,8 +25,6 @@ const ShowCase = () => {
               "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, kami akan membantu Anda untuk menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis."
             }
             variant={"cta"}
-            href={"mailto:pt.greenfield@gmail.com"}
-            link={"Hubungi kami"}
           />
           <ShowcaseImage />
         </Box>
