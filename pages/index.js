@@ -8,6 +8,9 @@ import Services from "../src/section/Services";
 import Help from "../src/section/Help";
 import Portfolio from "../src/section/Portfolio";
 import Solution from "../src/section/Solution";
+import Clients from "../src/section/Clients";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const PostsPage = ({ posts }) => (
   <Wrapper
@@ -20,6 +23,7 @@ const PostsPage = ({ posts }) => (
     <ShowCase />
     <Solution />
     <About />
+    <Clients />
     <Services />
     <Help />
     <Portfolio posts={posts} />

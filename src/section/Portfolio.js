@@ -13,7 +13,10 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
     <Box id={"portfolio-section"} as={"section"} sx={styles.container}>
       <Container id={"portfolio-section"}>
         <Box id={"portfolio-container"} as={"div"}>
-          <SectionHeader title={"Blog"} slogan={"Tulisan terbaru"} />
+          <SectionHeader
+            title={"Portofolio"}
+            slogan={"Cerita kami bersama klien"}
+          />
           <Grid
             id={"portfolio-gallery"}
             as={"div"}

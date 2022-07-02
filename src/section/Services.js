@@ -120,7 +120,6 @@ const styles = {
     py: "5rem !important",
 
     background: "rgb(244,240,255)",
-    background: "rgb(244,240,255)",
     background:
       "-moz-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
     background:
