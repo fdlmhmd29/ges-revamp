@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
-import { Box } from "theme-ui";
+import { Box, Container } from "theme-ui";
 import clients from "./data/Clients";
 
 export default class AutoPlay extends Component {
@@ -50,19 +50,21 @@ export default class AutoPlay extends Component {
     };
     return (
       <Box id="clients-container" as={"section"} sx={styles.container}>
-        <Slider {...settings}>
-          {clients?.map((client) => (
-            <Box key={client.id} sx={styles.imageWrapper}>
-              <Image
-                quality={100}
-                loading="lazy"
-                layout="fixed"
-                src={client.logo}
-                alt={client.name}
-              />
-            </Box>
-          ))}
-        </Slider>
+        <Container>
+          <Slider {...settings}>
+            {clients?.map((client) => (
+              <Box key={client.id} sx={styles.imageWrapper}>
+                <Image
+                  quality={100}
+                  loading="lazy"
+                  layout="fixed"
+                  src={client.logo}
+                  alt={client.name}
+                />
+              </Box>
+            ))}
+          </Slider>
+        </Container>
       </Box>
     );
   }
