@@ -23,7 +23,7 @@ const ShowCase = () => {
           <Video />
 
           <Info
-            title={<UilCheckCircle />}
+            title={"Sekilas Tentang Kami"}
             subtitle={"PT Greenfield Environment Solution"}
             text={
               "PT. Greenfield Environment Solution berkomitmen untuk memberikan Layanan dan Jasa konsultasi lingkungan hidup profesional terbaik dengan metode yang tepat, efisien dan efektif dari berbagai aspek yang merupakan pondasi utama perusahaan kami."

@@ -20,7 +20,7 @@ const ShowCase = () => {
         >
           <Info
             title={"Penyedia jasa pengurusan"}
-            subtitle={"Layanan Konsultasi Lingkungan"}
+            subtitle={"Layanan Konsultasi Lingkungan 🌲🌳"}
             text={
               "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, kami akan membantu Anda untuk menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis."
             }

@@ -1,6 +1,16 @@
-import { Box, Card, Container, Flex, Grid, Heading, Link } from "theme-ui";
+import {
+  Box,
+  Card,
+  Container,
+  Flex,
+  Grid,
+  Heading,
+  Link,
+  Text,
+} from "theme-ui";
 import Image from "next/image";
 import { UilEye, UilLinkAlt } from "@iconscout/react-unicons";
+import moment from "moment";
 
 //Yellow
 import SectionHeader from "../components/SectionHeader";
@@ -50,7 +60,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                           height={600}
                           width={item.coverImageWidth}
                           src={item.coverImage}
-                          alt={item.coverImageAlt || "Blog Image"}
+                          alt={item.coverImageAlt || "Gambar Portofolio"}
                           className={"card-image"}
                         />
                         <Flex as={"div"} id={"overlay"} sx={styles.overlay}>
@@ -72,7 +82,9 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                     <Flex
                       sx={{
                         padding: "1.1rem 1.6rem",
-                        justifyContent: "space-between",
+                        alignContent: "center",
+                        flexDirection: "column",
+                        gap: "5px",
                       }}
                     >
                       <Heading
@@ -81,15 +93,27 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                           fontSize: "0.875rem",
                           fontWeight: 600,
                           textTransform: "capitalized",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          whiteSpace: "nowrap",
                         }}
                       >
                         {item.title}
                       </Heading>
-                      <MoreLink
-                        href={"/" + item.slug}
-                        variant={"more"}
-                        text={"Lihat"}
-                      />
+                      <Box>
+                        <Text
+                          as={"p"}
+                          sx={{ fontSize: [0, null, "0.85rem"], color: "text" }}
+                        >
+                          {moment(item.date).format("DD MMMM, YYYY")}
+                        </Text>
+                        <Text
+                          as={"p"}
+                          sx={{ fontSize: [0, null, "0.85rem"], color: "text" }}
+                        >
+                          {item.category}
+                        </Text>
+                      </Box>
                     </Flex>
                   </Card>
                 ))}

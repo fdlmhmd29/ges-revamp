@@ -62,7 +62,7 @@ function Services() {
       <Container as={"section"}>
         <Box as={"div"}>
           <SectionHeader
-            title={"Jasa Perizinan dan Konsultasi Lingkungan"}
+            title={"Beragam Pilihan Jasa Perizinan dan Konsultasi Lingkungan"}
             slogan={
               "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
             }

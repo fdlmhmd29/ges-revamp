@@ -8,15 +8,17 @@ export default class AutoPlay extends Component {
   render() {
     const settings = {
       infinite: true,
+
+      lazyLoad: true,
       autoplay: true,
-      autoplaySpeed: 3000,
+      autoplaySpeed: 2500,
       pauseOnHover: true,
       responsive: [
         {
           breakpoint: 100000,
           settings: {
             infinite: true,
-            slidesToShow: 6,
+            slidesToShow: 7,
             slidesToScroll: 3,
           },
         },
@@ -69,6 +71,8 @@ export default class AutoPlay extends Component {
 const styles = {
   container: {
     py: "4rem !important",
+    px: "10rem !important",
+
     background: "rgba(255,255,255,1)",
   },
 
