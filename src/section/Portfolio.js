@@ -107,12 +107,6 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                         >
                           {moment(item.date).format("DD MMMM, YYYY")}
                         </Text>
-                        <Text
-                          as={"p"}
-                          sx={{ fontSize: [0, null, "0.85rem"], color: "text" }}
-                        >
-                          {item.category}
-                        </Text>
                       </Box>
                     </Flex>
                   </Card>

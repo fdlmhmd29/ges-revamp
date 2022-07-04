@@ -5,6 +5,7 @@ import Image from "next/image";
 // Yellow
 import mainLogo from "../../public/img/logo.png";
 import klhk from "../../public/klhk-logo.png";
+import lpjp from "../../public/img/lpjp.png";
 
 const Footer = (props) => (
   <Box
@@ -26,13 +27,14 @@ const Footer = (props) => (
           as={"div"}
           sx={{
             flexDirection: "row",
-
+            gap: "15px",
             justifyContent: "space-between",
             alignItems: "flex-start",
           }}
         >
-          <Box as={"div"} sx={{ maxWidth: "50%" }}>
+          <Box as={"div"} sx={{ width: "100%", maxWidth: "20rem" }}>
             {/* Logo */}
+
             <Link href={"/"} passHref>
               <NavLink id="nav-logo" className="logo" sx={styles.logo}>
                 <Image
@@ -44,22 +46,31 @@ const Footer = (props) => (
                 />
               </NavLink>
             </Link>
+
             {/* End of Logo */}
 
             {/* Nav Links */}
             <Flex as={"ul"} sx={{ flexDirection: "column" }}>
               <Box as={"li"}>
-                <Text sx={{ textAlign: "left" }} as={"p"}>
+                <Text
+                  sx={{
+                    fontSize: [0, null, "0.85rem"],
+                    color: "#8c98a4 !important",
+                    mb: "1rem",
+                  }}
+                  as={"p"}
+                >
                   Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan
-                  Republik Indonesia, Greenfield Environment Solution akan
-                  membantu Anda untuk menerbitkan izin Lingkungan suatu bangunan
-                  dengan mudah dan praktis.
+                  Republik Indonesia dan memiliki sertifikat LPJP AMDAL,
+                  Greenfield Environment Solution akan membantu Anda untuk
+                  menerbitkan izin Lingkungan suatu bangunan dengan mudah dan
+                  praktis.
                 </Text>
               </Box>
-              <Box as={"li"} sx={{ maxWidth: "50%" }}>
+              <Box as={"li"} sx={{ width: "100%", maxWidth: "15rem" }}>
                 <Flex as={"div"} sx={{ flexDirection: "column !important" }}>
                   <Image
-                    src={klhk}
+                    src={lpjp}
                     alt="Logo Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia"
                   />
                 </Flex>
@@ -69,8 +80,24 @@ const Footer = (props) => (
           </Box>
           {/* Nav Links */}
           <Box as={"div"} sx={{ textAlign: "left" }}>
-            <Box as={"span"}>Layanan</Box>
-            <Box as={"ul"}>
+            <Box
+              as={"div"}
+              sx={{
+                fontSize: "1rem",
+                fontWeight: 600,
+                pb: "1rem",
+                lineHeight: 1.4,
+                color: "#1e2022",
+              }}
+            >
+              Layanan
+            </Box>
+            <Box
+              as={"ul"}
+              sx={{
+                fontSize: [0, null, "0.85rem"],
+              }}
+            >
               <Box as={"li"}>
                 <Link href={"/"}>
                   <a>Persetujuan Teknis</a>
@@ -146,8 +173,9 @@ const Footer = (props) => (
 
 const styles = {
   logo: {
-    marginRight: "1.5rem",
-
+    pb: "1rem !important",
+    width: "100%",
+    maxWidth: "10rem",
     display: "flex",
     alignItems: "center",
     flexWrap: "wrap",
