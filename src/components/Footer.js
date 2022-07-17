@@ -11,6 +11,7 @@ import {
 
 import mainLogo from "../../public/img/logo.png";
 import klhk from "../../public/img/klhk-logo.png";
+import FooterChild from "./FooterChild";
 
 const layanan = [
   {
@@ -98,7 +99,6 @@ const Footer = (props) => (
   <Box
     as={"footer"}
     sx={{
-      py: "5rem !important",
       background: "rgb(244,240,255)",
       background:
         "-moz-linear-gradient(180deg,  rgba(255,255,255,1) 0%, rgba(244,240,255,1) 100%)",
@@ -109,7 +109,7 @@ const Footer = (props) => (
     }}
   >
     <Container>
-      <Box as={"div"}>
+      <Box as={"div"} sx={{ py: "5rem !important" }}>
         <Flex
           as={"div"}
           sx={{
@@ -151,10 +151,23 @@ const Footer = (props) => (
               </Box>
               <Box as={"li"} sx={{ width: "100%", maxWidth: "15rem" }}>
                 <Flex as={"div"} sx={{ flexDirection: "column !important" }}>
-                  <Image
-                    src={klhk}
-                    alt="Logo Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia"
-                  />
+                  <Link
+                    href={"https://www.menlhk.go.id/"}
+                    target={"_blank"}
+                    passHref
+                  >
+                    <NavLink id="nav-logo" className="logo" sx={styles.logo}>
+                      <Image
+                        quality={100}
+                        placeholder={"blur"}
+                        loading={"lazy"}
+                        src={klhk}
+                        alt={
+                          "Logo Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia"
+                        }
+                      />
+                    </NavLink>
+                  </Link>
                 </Flex>
               </Box>
             </Flex>
@@ -298,7 +311,8 @@ const Footer = (props) => (
           </Box>
         </Flex>
       </Box>
-      <Divider />
+      <Divider sx={{ my: 0, color: "#dae8f9" }} />
+      <FooterChild />
     </Container>
   </Box>
 );
