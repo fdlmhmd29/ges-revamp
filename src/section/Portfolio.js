@@ -14,7 +14,6 @@ import moment from "moment";
 
 //Yellow
 import SectionHeader from "../components/SectionHeader";
-import MoreLink from "../components/MoreLink";
 
 const Portfolio = ({ posts, prevPorto, nextPorto }) => {
   const isLocal = process.env.NODE_ENV === "development";
