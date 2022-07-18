@@ -14,6 +14,7 @@ import moment from "moment";
 
 //Yellow
 import SectionHeader from "../components/SectionHeader";
+import MoreLink from "../components/MoreLink";
 
 const Portfolio = ({ posts, prevPorto, nextPorto }) => {
   const isLocal = process.env.NODE_ENV === "development";
@@ -95,9 +96,12 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                           overflow: "hidden",
                           textOverflow: "ellipsis",
                           whiteSpace: "nowrap",
+                          color: "#3f454b",
                         }}
                       >
-                        {item.title}
+                        <Link href={"/" + item.slug} passHref>
+                          {item.title}
+                        </Link>
                       </Heading>
                       <Box>
                         <Text
@@ -107,10 +111,29 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                           {moment(item.date).format("DD MMMM, YYYY")}
                         </Text>
                       </Box>
+                      <Box>
+                        <Text
+                          as={"p"}
+                          sx={{ fontSize: [0, null, "0.85rem"], color: "text" }}
+                        >
+                          <Link href={"/" + item.slug} passHref>
+                            {item.coverImageAlt}
+                          </Link>
+                        </Text>
+                      </Box>
                     </Flex>
                   </Card>
                 ))}
           </Grid>
+          <Flex
+            sx={{
+              justifyContent: "center",
+              justifyItems: "center",
+              mt: "3rem",
+            }}
+          >
+            <MoreLink href={"/"} text={"Lihat Semua"} variant="more" />
+          </Flex>
         </Box>
       </Container>
     </Box>

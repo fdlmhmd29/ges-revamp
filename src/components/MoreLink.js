@@ -1,9 +1,9 @@
 import { Link } from "theme-ui";
 
-function MoreLink(props) {
+function MoreLink({ href = "", variant = "", text = "" }) {
   return (
-    <Link as={"a"} href={props.href} variant={props.variant}>
-      {props.text}
+    <Link as={"a"} href={href} variant={variant}>
+      {text}
     </Link>
   );
 }

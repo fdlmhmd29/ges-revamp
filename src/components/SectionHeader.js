@@ -1,6 +1,7 @@
+import { bool } from "prop-types";
 import { Box, Heading, Text } from "theme-ui";
 
-const SectionHeader = ({ title, slogan, isWhite }) => (
+const SectionHeader = ({ title = "", slogan = "", isWhite = bool }) => (
   <Box id={"section-header"} variant={"sectionHeader"} sx={{ pb: "32px" }}>
     <Heading
       as={"h2"}
