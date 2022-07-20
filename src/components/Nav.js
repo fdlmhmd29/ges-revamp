@@ -1,5 +1,6 @@
-import { Box, Container, Flex } from "theme-ui";
+import { Box, Container, Flex, Text } from "theme-ui";
 import React, { useState, useEffect } from "react";
+import { UilChat, UilEnglishToChinese } from "@iconscout/react-unicons";
 
 // Yellow
 import { ThemeToggle, Logo } from "../lib";
@@ -75,6 +76,8 @@ const Nav = () => {
           sx={{
             flexDirection: "row",
             justifyContent: "space-between",
+
+            alignItems: "center",
           }}
         >
           <Logo />
@@ -83,7 +86,33 @@ const Nav = () => {
           {codeToRunOnClient && (
             <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
           )}
-          {typeof theme.colors.modes === "object" && <ThemeToggle />}
+          <Flex sx={{ gap: "2rem", justifyContent: "space-between" }}>
+            <Flex
+              as={"button"}
+              sx={{
+                alignItems: "center !important",
+                gap: "5px",
+                background: "none",
+                color: "text",
+              }}
+            >
+              <UilEnglishToChinese />{" "}
+              <Text sx={{ fontSize: "14px" }}>Language</Text>
+            </Flex>
+            {typeof theme.colors.modes === "object" && <ThemeToggle />}
+            <Flex
+              as={"button"}
+              sx={{
+                alignItems: "center !important",
+                gap: "5px",
+                background: "none",
+                color: "text",
+              }}
+            >
+              <UilChat />
+              <Text sx={{ fontSize: "14px" }}>Hubungi Kami</Text>
+            </Flex>
+          </Flex>
         </Flex>
       </Container>
       <Box
