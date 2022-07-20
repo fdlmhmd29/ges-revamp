@@ -22,7 +22,7 @@ const ShowCase = () => {
             title={"Penyedia jasa pengurusan"}
             subtitle={"Layanan Konsultasi Lingkungan 🌲🌳"}
             text={
-              "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, Greenfield Environment Solution akan membantu Anda untuk menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis."
+              "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, Greenfield Environment Solution akan membantu Anda untuk menerbitkan izin lingkungan hidup dengan mudah dan praktis."
             }
             variant={"cta"}
           />

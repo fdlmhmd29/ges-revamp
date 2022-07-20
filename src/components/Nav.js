@@ -1,12 +1,13 @@
-import { Container } from "theme-ui"
-import { useEffect } from "react"
+import { Container } from "theme-ui";
+import { useEffect } from "react";
 
 // Yellow
-import { ThemeToggle, Links, Logo } from "../lib"
-import theme from "../layout/Theme"
+import { ThemeToggle, Logo } from "../lib";
+import Navbar from "./navbar/Navbar";
+import theme from "../layout/Theme";
 
 // inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
-let codeToRunOnClient = false
+let codeToRunOnClient = false;
 if (theme.colors.modes && theme.colors.modes.length !== 0) {
   codeToRunOnClient = `
   (function() {
@@ -27,19 +28,19 @@ if (theme.colors.modes && theme.colors.modes.length !== 0) {
         document.body.style.setProperty("--theme-ui-colors-"+colorName, "var(--theme-ui-colors-primary,"+theme.colors.modes[mode][colorName]+")")
       })
     }
-  })()`
+  })()`;
 }
 
 const Nav = (props) => {
   useEffect(() => {
     // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
-    document.body.removeAttribute("style")
-  }, [])
+    document.body.removeAttribute("style");
+  }, []);
 
   return (
     <Container id="nav" as={"nav"} sx={styles.container}>
       <Logo />
-      <Links />
+      <Navbar />
 
       {/* ---Script--- */}
       {codeToRunOnClient && (
@@ -47,15 +48,16 @@ const Nav = (props) => {
       )}
       {typeof theme.colors.modes === "object" && <ThemeToggle />}
     </Container>
-  )
-}
+  );
+};
 
 const styles = {
   container: {
     display: "flex",
     alignItems: "center",
+    justifyContent: "space-between",
     flexWrap: "wrap",
   },
-}
+};
 
-export default Nav
+export default Nav;

@@ -314,6 +314,24 @@ const Footer = (props) => (
       <Divider sx={{ my: 0, color: "#dae8f9" }} />
       <FooterChild />
     </Container>
+    <Box as={"div"}>
+      <Text
+        as={"p"}
+        sx={{
+          color: "#fff",
+          fontSize: "14px",
+          textAlign: "center",
+          backgroundColor: "#f4b313",
+          justifyItems: "center",
+          py: "1rem !important",
+        }}
+      >
+        &copy; Greenfield Environment Solution. All rights reserved{" "}
+        {new Date().getFullYear()} <br />
+        Dibuat dengan ❤️ oleh{" "}
+        <a href="https://github.com/fdlmhmd29">fdlmhmd29</a>
+      </Text>
+    </Box>
   </Box>
 );
 

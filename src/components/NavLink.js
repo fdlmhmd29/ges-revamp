@@ -6,10 +6,11 @@ const NavLink = ({ href, active, children }) => (
     <A
       sx={{
         position: "relative",
-        display: "inline-block",
+        color: "inherit",
+        display: "block",
         margin: "0 1rem",
         textTransform: "uppercase",
-        fontSize: "0.75rem",
+        fontSize: "inherit",
         letterSpacing: "0.031rem",
         fontWeight: 500,
         textDecoration: "none",

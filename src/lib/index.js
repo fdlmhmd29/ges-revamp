@@ -7,7 +7,7 @@ export { default as Container } from "../components/Container";
 export { default as DraftBadge } from "../components/DraftBadge";
 export { default as Footer } from "../components/Footer";
 export { default as Header } from "../components/Header";
-export { default as Links } from "../components/Links";
+export { default as Navbar } from "../components/Navbar";
 export { default as Logo } from "../components/Logo";
 export { default as Main } from "../components/Main";
 export { default as Nav } from "../components/Nav";

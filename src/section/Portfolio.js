@@ -111,16 +111,6 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
                           {moment(item.date).format("DD MMMM, YYYY")}
                         </Text>
                       </Box>
-                      <Box>
-                        <Text
-                          as={"p"}
-                          sx={{ fontSize: [0, null, "0.85rem"], color: "text" }}
-                        >
-                          <Link href={"/" + item.slug} passHref>
-                            {item.coverImageAlt}
-                          </Link>
-                        </Text>
-                      </Box>
                     </Flex>
                   </Card>
                 ))}
