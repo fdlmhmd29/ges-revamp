@@ -1,10 +1,11 @@
-import { Container } from "theme-ui";
-import { useEffect } from "react";
+import { Box, Container, Flex } from "theme-ui";
+import React, { useState, useEffect } from "react";
 
 // Yellow
 import { ThemeToggle, Logo } from "../lib";
 import Navbar from "./navbar/Navbar";
 import theme from "../layout/Theme";
+import { debounce } from "../utilities/debounce";
 
 // inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
 let codeToRunOnClient = false;
@@ -31,32 +32,82 @@ if (theme.colors.modes && theme.colors.modes.length !== 0) {
   })()`;
 }
 
-const Nav = (props) => {
+const Nav = () => {
+  const [prevScroll, setPrevScroll] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  const handleScroll = debounce(() => {
+    const currentScroll = window.scrollY;
+
+    setVisible(
+      (prevScroll > currentScroll && prevScroll - currentScroll > 70) ||
+        currentScroll < 10
+    );
+
+    setPrevScroll(currentScroll);
+  }, 100);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScroll, visible, handleScroll]);
+
+  const navbarStyles = {
+    position: "fixed",
+    height: "60px",
+    width: "100%",
+    backgroundColor: "grey",
+    textAlign: "center",
+    transition: "top 0.6s",
+  };
+
   useEffect(() => {
     // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
     document.body.removeAttribute("style");
   }, []);
 
   return (
-    <Container id="nav" as={"nav"} sx={styles.container}>
-      <Logo />
-      <Navbar />
+    <Box sx={{ borderBottom: "1px solid", borderColor: "#dddddd" }}>
+      <Container id="nav" as={"nav"} sx={styles.container}>
+        <Flex
+          as={"div"}
+          sx={{
+            flexDirection: "row",
+            justifyContent: "space-between",
+          }}
+        >
+          <Logo />
 
-      {/* ---Script--- */}
-      {codeToRunOnClient && (
-        <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
-      )}
-      {typeof theme.colors.modes === "object" && <ThemeToggle />}
-    </Container>
+          {/* ---Script--- */}
+          {codeToRunOnClient && (
+            <script dangerouslySetInnerHTML={{ __html: codeToRunOnClient }} />
+          )}
+          {typeof theme.colors.modes === "object" && <ThemeToggle />}
+        </Flex>
+      </Container>
+      <Box
+        sx={{
+          position: visible ? "" : "fixed",
+          top: visible ? "" : "-58px",
+          borderTop: "1px solid",
+          borderColor: "#dddddd",
+        }}
+      >
+        <Container>
+          <Navbar />
+        </Container>
+      </Box>
+    </Box>
   );
 };
 
 const styles = {
   container: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
-    flexWrap: "wrap",
+    // display: "flex",
+    // alignItems: "center",
+    // justifyContent: "space-between",
+    // flexWrap: "wrap",
   },
 };
 

@@ -221,10 +221,10 @@ const Style = (props) => (
     }
 
     header.scrolled {
-      background-color: hsla(256, 100%, 97%, 0.8);
+      background-color: hsla(256, 100%, 97%, 1);
       box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.03);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
+      /* -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px); */
     }
 
     header.scrolled .logo {
@@ -345,7 +345,7 @@ const Style = (props) => (
     .menu-items a,
     .menu-items button {
       text-align: left;
-      padding: 0.7rem 1rem;
+      padding: 1rem 1rem 1rem 0rem;
     }
 
     .menu-items a:hover,
