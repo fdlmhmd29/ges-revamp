@@ -32,14 +32,6 @@ const MenuItems = ({ items, depthLevel }) => {
     window.innerWidth > 960 && setDropdown(false);
   };
 
-  const styles = {
-    position: "fixed",
-    width: "100%",
-    backgroundColor: "grey",
-    textAlign: "center",
-    transition: "top 0.6s",
-  };
-
   return (
     <li
       className="menu-items"

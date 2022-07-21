@@ -311,26 +311,45 @@ const Footer = (props) => (
           </Box>
         </Flex>
       </Box>
-      <Divider sx={{ my: 0, color: "#dae8f9" }} />
+      <Divider sx={{ my: 0, color: "#ddd" }} />
       <FooterChild />
     </Container>
-    <Box as={"div"}>
-      <Text
-        as={"p"}
-        sx={{
-          color: "#fff",
-          fontSize: "14px",
-          textAlign: "center",
-          backgroundColor: "#f4b313",
-          justifyItems: "center",
-          py: "1rem !important",
-        }}
-      >
-        &copy; Greenfield Environment Solution. All rights reserved{" "}
-        {new Date().getFullYear()} <br />
-        Dibuat dengan ❤️ oleh{" "}
-        <a href="https://github.com/fdlmhmd29">fdlmhmd29</a>
-      </Text>
+    <Box sx={{ backgroundColor: "#f4b313" }}>
+      <Container>
+        <Flex
+          as={"div"}
+          sx={{
+            py: "1rem !important",
+            justifyContent: "space-between",
+            flexDirection: "row",
+          }}
+        >
+          <Text
+            as={"p"}
+            sx={{
+              color: "#fff",
+              fontSize: "14px",
+            }}
+          >
+            &copy; Greenfield Environment Solution. All rights reserved{" "}
+            {new Date().getFullYear()}
+          </Text>
+          <Text sx={{ color: "#fff", fontSize: "14px" }}>
+            Dibuat dengan ❤️ oleh{" "}
+            <Link
+              sx={{
+                color: "black",
+                fontWeight: "Bold",
+                transition: "ease-in 0.2s",
+                "&:hover": { color: "red" },
+              }}
+              href="https://github.com/fdlmhmd29"
+            >
+              fdlmhmd29
+            </Link>
+          </Text>
+        </Flex>
+      </Container>
     </Box>
   </Box>
 );
@@ -347,9 +366,6 @@ const styles = {
   },
   link: {
     color: "#8c98a4 !important",
-    "&:hover": {
-      color: "#fff",
-    },
   },
 };
 

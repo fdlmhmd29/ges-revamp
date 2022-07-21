@@ -8,7 +8,7 @@ export const menuItems = [
     link: "/post",
   },
   {
-    title: "Pelayanan",
+    title: "Layanan",
     submenu: [
       {
         title: "Persetujuan Teknis",

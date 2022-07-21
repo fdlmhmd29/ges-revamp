@@ -345,7 +345,7 @@ const Style = (props) => (
     .menu-items a,
     .menu-items button {
       text-align: left;
-      padding: 1rem 1rem 1rem 0rem;
+      padding: 1rem;
     }
 
     .menu-items a:hover,
@@ -375,7 +375,7 @@ const Style = (props) => (
       padding: 0.5rem 0;
       list-style: none;
       background-color: #fff;
-      border-radius: 0.5rem;
+      border-radius: 0 0 0.5rem 0.5rem;
       display: none;
     }
 

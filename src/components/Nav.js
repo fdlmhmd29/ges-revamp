@@ -116,14 +116,13 @@ const Nav = () => {
         </Flex>
       </Container>
       <Box
+        className="nav-box"
         sx={{
-          position: visible ? "" : "fixed",
-          top: visible ? "" : "-58px",
           borderTop: "1px solid",
           borderColor: "#dddddd",
         }}
       >
-        <Container>
+        <Container className="nav-container">
           <Navbar />
         </Container>
       </Box>
