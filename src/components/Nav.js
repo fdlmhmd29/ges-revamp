@@ -34,35 +34,6 @@ if (theme.colors.modes && theme.colors.modes.length !== 0) {
 }
 
 const Nav = () => {
-  const [prevScroll, setPrevScroll] = useState(0);
-  const [visible, setVisible] = useState(true);
-
-  const handleScroll = debounce(() => {
-    const currentScroll = window.scrollY;
-
-    setVisible(
-      (prevScroll > currentScroll && prevScroll - currentScroll > 70) ||
-        currentScroll < 10
-    );
-
-    setPrevScroll(currentScroll);
-  }, 100);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [prevScroll, visible, handleScroll]);
-
-  const navbarStyles = {
-    position: "fixed",
-    height: "60px",
-    width: "100%",
-    backgroundColor: "grey",
-    textAlign: "center",
-    transition: "top 0.6s",
-  };
-
   useEffect(() => {
     // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
     document.body.removeAttribute("style");
@@ -76,7 +47,6 @@ const Nav = () => {
           sx={{
             flexDirection: "row",
             justifyContent: "space-between",
-
             alignItems: "center",
           }}
         >

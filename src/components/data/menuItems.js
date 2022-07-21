@@ -5,7 +5,7 @@ export const menuItems = [
   },
   {
     title: "Blog",
-    link: "/post",
+    link: "/posts",
   },
   {
     title: "Layanan",
@@ -69,7 +69,7 @@ export const menuItems = [
     submenu: [
       {
         title: "Tentang Kami",
-        link: "/tentang-kami",
+        link: "/about",
       },
       {
         title: "Kontak",
