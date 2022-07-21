@@ -385,8 +385,14 @@ const Style = (props) => (
 
     .dropdown .dropdown-submenu {
       position: absolute;
+      border-left: 1px solid #ebebeb;
+      border-radius: 0 0 0.5rem 0;
+
+      min-width: 14rem;
+      box-shadow: 0 10px 15px -3px rgba(46, 41, 51, 0.08),
+        0 4px 6px -2px rgba(71, 63, 79, 0.16);
       left: 100%;
-      top: -7px;
+      top: -15%;
     }
   `}</style>
 );

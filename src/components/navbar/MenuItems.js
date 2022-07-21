@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { Flex, Link } from "theme-ui";
-import { UilAngleDown } from "@iconscout/react-unicons";
+import { UilAngleDown, UilAngleRight } from "@iconscout/react-unicons";
 
 import Dropdown from "./Dropdown";
 
@@ -51,11 +51,11 @@ const MenuItems = ({ items, depthLevel }) => {
             <Flex
               sx={{
                 flexDirection: "row",
-                justifyItems: "center",
+                alignItems: "center",
               }}
             >
               {items.title}{" "}
-              {depthLevel > 0 ? <span>&raquo;</span> : <UilAngleDown />}
+              {depthLevel > 0 ? <UilAngleRight /> : <UilAngleDown />}
             </Flex>
           </Link>
           <Dropdown
