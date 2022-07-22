@@ -22,6 +22,8 @@ export { default as Wrapper } from "../layout/Wrapper";
 
 // Data
 export { default as ServicesData } from "../section/data/Services";
+export { default as enItems } from "../components/data/navbar/en";
+export { default as idItems } from "../components/data/navbar/id";
 
 // Images
 import icon1 from "../../public/assets/svg/icon1.svg";

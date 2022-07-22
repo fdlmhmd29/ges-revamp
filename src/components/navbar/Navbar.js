@@ -1,8 +1,7 @@
 import { Box } from "theme-ui";
 import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { idItems } from "../data/id";
-import { enItems } from "../data/en";
+import { enItems, idItems } from "../../lib";
 import MenuItems from "./MenuItems";
 import { debounce } from "../../utilities/debounce";
 
