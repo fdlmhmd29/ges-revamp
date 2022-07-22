@@ -4,7 +4,6 @@
   "localeDetection": false,
   "pages": {
     "*": ["common"],
-    "/": ["showcase"],
-    "/about": ["about"]
+    "/": ["showcase"]
   }
 }
