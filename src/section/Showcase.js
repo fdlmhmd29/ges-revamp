@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 const ShowCase = () => {
   let router = useRouter();
   let text =
-    router.locale === "ind"
+    router.locale === "id"
       ? "Layanan Konsultasi Lingkungan 🌲🌳"
       : router.locale === "en"
       ? "Environmental Consulting Service"
