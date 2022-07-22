@@ -1,7 +1,9 @@
+const nextTranslate = require("next-translate");
 const withMDX = require("@next/mdx")({
   extension: /\.mdx?$/,
 });
-module.exports = withMDX({
+module.exports = nextTranslate();
+withMDX({
   pageExtensions: ["js", "jsx", "md", "mdx"],
   webpack: (config, { isServer }) => {
     // Fixes npm packages (mdx) that depend on `fs` module
@@ -11,7 +13,3 @@ module.exports = withMDX({
     return config;
   },
 });
-
-const nextTranslate = require("next-translate");
-
-module.exports = nextTranslate();
