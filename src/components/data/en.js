@@ -1,6 +1,6 @@
-export const menuItems = [
+export const enItems = [
   {
-    title: "Beranda",
+    title: "Home",
     link: "/",
   },
   {
@@ -8,7 +8,7 @@ export const menuItems = [
     link: "/posts",
   },
   {
-    title: "Layanan",
+    title: "Services",
     submenu: [
       {
         title: "Persetujuan Teknis",
@@ -65,7 +65,7 @@ export const menuItems = [
     ],
   },
   {
-    title: "Perusahaan",
+    title: "Company",
     submenu: [
       {
         title: "Tentang Kami",

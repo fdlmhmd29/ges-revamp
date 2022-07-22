@@ -2,16 +2,14 @@ import React from "react";
 import { Box, Container } from "theme-ui";
 import Info from "../components/Info";
 import ShowcaseImage from "../components/Image";
-import { useRouter } from "next/router";
+
+import useTranslation from "next-translate/useTranslation";
 
 const ShowCase = () => {
-  let router = useRouter();
-  let text =
-    router.locale === "id"
-      ? "Layanan Konsultasi Lingkungan 🌲🌳"
-      : router.locale === "en"
-      ? "Environmental Consulting Service"
-      : null;
+  const { t, lang } = useTranslation("showcase");
+  const title = t("title");
+  const subtitle = t("subtitle");
+  const text = t("text");
 
   return (
     <Box id="showcase-container" as={"section"} sx={styles.container}>
@@ -27,14 +25,7 @@ const ShowCase = () => {
             alignItems: "center",
           }}
         >
-          <Info
-            title={"Penyedia jasa pengurusan"}
-            subtitle={text}
-            text={
-              "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, Greenfield Environment Solution akan membantu Anda untuk menerbitkan izin lingkungan hidup dengan mudah dan praktis."
-            }
-            variant={"cta"}
-          />
+          <Info title={title} subtitle={subtitle} text={text} variant={"cta"} />
           <ShowcaseImage />
         </Box>
       </Container>

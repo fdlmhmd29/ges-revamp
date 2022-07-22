@@ -1,0 +1,10 @@
+{
+  "locales": ["en", "id"],
+  "defaultLocale": "id",
+  "localeDetection": false,
+  "pages": {
+    "*": ["common"],
+    "/": ["showcase"],
+    "/about": ["about"]
+  }
+}

@@ -16,3 +16,7 @@ module.exports = withMDX({
     localeDetection: false,
   },
 });
+
+const nextTranslate = require("next-translate");
+
+module.exports = nextTranslate();

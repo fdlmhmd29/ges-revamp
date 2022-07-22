@@ -1,10 +1,14 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import { Box, Button, Heading, Text } from "theme-ui";
 import { ModalProvider, Modal } from "./CTA";
 import MoreLink from "./MoreLink";
 
+import useTranslation from "next-translate/useTranslation";
+
 function Info({ title, subtitle, text, variant, link, href }) {
+  const { t, lang } = useTranslation("common");
+  const button = t("SCbutton");
+
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <ModalProvider>
@@ -25,7 +29,7 @@ function Info({ title, subtitle, text, variant, link, href }) {
             <MoreLink href={href} text={link} variant={variant} />
           ) : (
             <Button type="button" onClick={() => setIsModalOpen(true)}>
-              Hubungi Kami
+              {button}
             </Button>
           )}
           {isModalOpen && (

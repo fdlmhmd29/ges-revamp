@@ -3,10 +3,15 @@ import { useColorMode, Box, Text, Flex } from "theme-ui";
 import { UilMoon, UilSun } from "@iconscout/react-unicons";
 
 // Yellow
+import useTranslation from "next-translate/useTranslation";
 
 const ThemeToggle = (props) => {
   const [colorMode, setColorMode] = useColorMode();
   const [opacity, setOpacity] = useState(0);
+
+  const { t, lang } = useTranslation("common");
+  const Tbutton1 = t("Tbutton1");
+  const Tbutton2 = t("Tbutton2");
 
   useEffect(() => {
     // fade in animation
@@ -34,11 +39,11 @@ const ThemeToggle = (props) => {
       <Box>
         {colorMode === "default" ? (
           <Flex sx={{ flexDirection: "row", alignItems: "center", gap: "5px" }}>
-            <UilSun /> <Text sx={{ fontSize: "14px" }}>Terang</Text>
+            <UilSun /> <Text sx={{ fontSize: "14px" }}>{Tbutton1}</Text>
           </Flex>
         ) : (
           <Flex sx={{ flexDirection: "row", alignItems: "center", gap: "5px" }}>
-            <UilMoon /> <Text sx={{ fontSize: "14px" }}>Gelap</Text>
+            <UilMoon /> <Text sx={{ fontSize: "14px" }}>{Tbutton2}</Text>
           </Flex>
         )}
       </Box>

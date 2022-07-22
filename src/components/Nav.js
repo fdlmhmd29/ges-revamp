@@ -2,6 +2,7 @@ import { Box, Container, Flex, Text, Link } from "theme-ui";
 import React, { useState, useEffect } from "react";
 import { UilChat, UilEnglishToChinese } from "@iconscout/react-unicons";
 import { useRouter } from "next/router";
+import useTranslation from "next-translate/useTranslation";
 // Yellow
 import { ThemeToggle, Logo } from "../lib";
 import Navbar from "./navbar/Navbar";
@@ -33,14 +34,10 @@ if (theme.colors.modes && theme.colors.modes.length !== 0) {
 }
 
 const Nav = () => {
+  const { t, lang } = useTranslation("common");
+  const text = t("Ntext");
+  const button = t("SCbutton");
   let router = useRouter();
-  let text =
-    router.locale === "id"
-      ? "Language"
-      : router.locale === "en"
-      ? "Bahasa"
-      : null;
-
   let link =
     router.locale === "id" ? "/en" : router.locale === "en" ? "/id" : null;
 
@@ -91,7 +88,7 @@ const Nav = () => {
               }}
             >
               <UilChat />
-              <Text sx={{ fontSize: "14px" }}>Hubungi Kami</Text>
+              <Text sx={{ fontSize: "14px" }}>{button}</Text>
             </Flex>
           </Flex>
         </Flex>

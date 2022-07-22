@@ -1,10 +1,13 @@
 import { Box } from "theme-ui";
+import { useRouter } from "next/router";
 import React, { useState, useEffect } from "react";
-import { menuItems } from "../data/menuItems";
+import { idItems } from "../data/id";
+import { enItems } from "../data/en";
 import MenuItems from "./MenuItems";
 import { debounce } from "../../utilities/debounce";
 
 const Navbar = () => {
+  let router = useRouter();
   const [prevScroll, setPrevScroll] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -25,9 +28,12 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [prevScroll, visible, handleScroll]);
 
+  let items =
+    router.locale === "id" ? idItems : router.locale === "en" ? enItems : null;
+
   return (
     <Box className="menus" sx={{ marginLeft: "-16px" }}>
-      {menuItems.map((menu, index) => {
+      {items.map((menu, index) => {
         const depthLevel = 0;
         return <MenuItems items={menu} key={index} depthLevel={depthLevel} />;
       })}
