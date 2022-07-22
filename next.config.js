@@ -10,11 +10,6 @@ module.exports = withMDX({
     }
     return config;
   },
-  i18n: {
-    locales: ["en", "id"],
-    defaultLocale: "id",
-    localeDetection: false,
-  },
 });
 
 const nextTranslate = require("next-translate");
