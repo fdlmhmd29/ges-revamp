@@ -1,12 +1,11 @@
-import { Box, Container, Flex, Text } from "theme-ui";
+import { Box, Container, Flex, Text, Link } from "theme-ui";
 import React, { useState, useEffect } from "react";
 import { UilChat, UilEnglishToChinese } from "@iconscout/react-unicons";
-
+import { useRouter } from "next/router";
 // Yellow
 import { ThemeToggle, Logo } from "../lib";
 import Navbar from "./navbar/Navbar";
 import theme from "../layout/Theme";
-import { debounce } from "../utilities/debounce";
 
 // inject inline styles on the body before the page is rendered to avoid the flash of light if we are in dark mode
 let codeToRunOnClient = false;
@@ -34,6 +33,17 @@ if (theme.colors.modes && theme.colors.modes.length !== 0) {
 }
 
 const Nav = () => {
+  let router = useRouter();
+  let text =
+    router.locale === "id"
+      ? "Language"
+      : router.locale === "en"
+      ? "Bahasa"
+      : null;
+
+  let link =
+    router.locale === "id" ? "/en" : router.locale === "en" ? "/id" : null;
+
   useEffect(() => {
     // the theme styles will be applied by theme ui after hydration, so remove the inline style we injected on page load
     document.body.removeAttribute("style");
@@ -58,7 +68,6 @@ const Nav = () => {
           )}
           <Flex sx={{ gap: "2rem", justifyContent: "space-between" }}>
             <Flex
-              as={"button"}
               sx={{
                 alignItems: "center !important",
                 gap: "5px",
@@ -66,8 +75,10 @@ const Nav = () => {
                 color: "text",
               }}
             >
-              <UilEnglishToChinese />{" "}
-              <Text sx={{ fontSize: "14px" }}>Language</Text>
+              <UilEnglishToChinese />
+              <Link href={link}>
+                <Text sx={{ fontSize: "14px" }}>{text}</Text>
+              </Link>
             </Flex>
             {typeof theme.colors.modes === "object" && <ThemeToggle />}
             <Flex
