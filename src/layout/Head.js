@@ -6,6 +6,11 @@ const DocHead = (props) => (
   <>
     <Head>
       <title>{props.title}</title>
+      <link
+        rel="alternate"
+        href="https://ges-revamp.vercel.app/id/"
+        hrefLang="in"
+      />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       <link rel="canonical" href={props.url} />
       <meta name="description" content={props.description} />

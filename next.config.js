@@ -11,7 +11,7 @@ module.exports = withMDX({
     return config;
   },
   i18n: {
-    locales: ["in", "en"],
-    defaultLocale: "in",
+    locales: ["en", "id"],
+    defaultLocale: "id",
   },
 });

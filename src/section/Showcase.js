@@ -2,8 +2,17 @@ import React from "react";
 import { Box, Container } from "theme-ui";
 import Info from "../components/Info";
 import ShowcaseImage from "../components/Image";
+import { useRouter } from "next/router";
 
 const ShowCase = () => {
+  let router = useRouter();
+  let text =
+    router.locale === "ind"
+      ? "Layanan Konsultasi Lingkungan 🌲🌳"
+      : router.locale === "en"
+      ? "Environmental Consulting Service"
+      : null;
+
   return (
     <Box id="showcase-container" as={"section"} sx={styles.container}>
       <Container className={"showcase"}>
@@ -20,7 +29,7 @@ const ShowCase = () => {
         >
           <Info
             title={"Penyedia jasa pengurusan"}
-            subtitle={"Layanan Konsultasi Lingkungan 🌲🌳"}
+            subtitle={text}
             text={
               "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, Greenfield Environment Solution akan membantu Anda untuk menerbitkan izin lingkungan hidup dengan mudah dan praktis."
             }
