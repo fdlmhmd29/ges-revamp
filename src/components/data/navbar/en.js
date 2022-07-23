@@ -1,4 +1,4 @@
-export const enItems = [
+const enItems = [
   {
     title: "Home",
     link: "/",
@@ -90,3 +90,5 @@ export const enItems = [
     ],
   },
 ];
+
+export default enItems;

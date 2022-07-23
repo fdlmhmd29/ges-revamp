@@ -1,4 +1,4 @@
-export const idItems = [
+const idItems = [
   {
     title: "Beranda",
     link: "/",
@@ -90,3 +90,5 @@ export const idItems = [
     ],
   },
 ];
+
+export default idItems;
