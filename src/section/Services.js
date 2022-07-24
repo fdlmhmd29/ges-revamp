@@ -1,55 +1,21 @@
-import { Box, Button, Container, Grid, Text } from "theme-ui";
+import { Box, Container, Grid, Text } from "theme-ui";
 import React, { useState, useEffect } from "react";
 
 // Yellow
-import { Card, ServicesData } from "../lib";
-import SectionHeader from "../components/SectionHeader";
-
-const category = [
-  {
-    id: 1,
-    name: "all",
-    title: "Semua",
-  },
-  {
-    id: 2,
-    name: "pertek",
-    title: "Pertek",
-  },
-  {
-    id: 3,
-    name: "studi",
-    title: "Studi",
-  },
-  {
-    id: 4,
-    name: "rkl-rpl",
-    title: "RKL-RPL",
-  },
-  {
-    id: 5,
-    name: "monitoring",
-    title: "Monitoring",
-  },
-  {
-    id: 6,
-    name: "installasi",
-    title: "Installasi",
-  },
-];
+import { Card, ServiceDatas, ServiceCategories, SectionHeader } from "../lib";
 
 function Services() {
   const [filter, setFilter] = useState("all");
   const [portofolio, setPortofolio] = useState([]);
 
   useEffect(() => {
-    setPortofolio(ServicesData);
+    setPortofolio(ServiceDatas);
   }, []);
 
   useEffect(() => {
     setPortofolio([]);
 
-    const filtered = ServicesData.map((p) => ({
+    const filtered = ServiceDatas.map((p) => ({
       ...p,
       filtered: p.category.includes(filter),
     }));
@@ -75,7 +41,7 @@ function Services() {
             sx={styles.scrollMenu}
           >
             <Box as={"div"}>
-              {category.map((c) => (
+              {ServiceCategories.map((c) => (
                 <Text
                   as={"p"}
                   id={c.name}

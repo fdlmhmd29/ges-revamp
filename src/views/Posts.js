@@ -1,23 +1,23 @@
-import MDX from "@mdx-js/runtime"
-import { Flex, Box, Heading } from "theme-ui"
-import Image from "next/image"
-import Link from "next/link"
+import MDX from "@mdx-js/runtime";
+import { Flex, Box, Heading } from "theme-ui";
+import Image from "next/image";
+import Link from "next/link";
 
 // Yellow
-import { Container, DraftBadge } from "../lib"
+import { Container, DraftBadge } from "../lib";
 
 const Posts = ({ posts, prevPosts, nextPosts }) => {
-  const isLocal = process.env.NODE_ENV === "development"
+  const isLocal = process.env.NODE_ENV === "development";
 
   return (
     <Container>
       {posts &&
         posts
           .filter((post) => {
-            return isLocal || !post.draft
+            return isLocal || !post.draft;
           })
           .map((post) => (
-            <Box sx={{ pb: 5 }} key={post.slug}>
+            <Box sx={{ pt: "10rem !important" }} key={post.slug}>
               <Heading sx={{ pb: 2, position: "relative" }}>
                 {post.draft && <DraftBadge />}
                 <Link href={"/" + post.slug} passHref>
@@ -66,7 +66,7 @@ const Posts = ({ posts, prevPosts, nextPosts }) => {
         </Box>
       </Flex>
     </Container>
-  )
-}
+  );
+};
 
-export default Posts
+export default Posts;

@@ -11,56 +11,56 @@ const enItems = [
     title: "Services",
     submenu: [
       {
-        title: "Persetujuan Teknis",
-        link: "/persetujuan-teknis",
+        title: "Technical Approval",
+        link: "/services/technical-approval",
         submenu: [
           {
-            title: "Emisi Gas Buang",
-            link: "/emisi-gas-buang",
+            title: "Exhaust Gas Emissions",
+            link: "/services/technical-approval/exhaust-gas-emissions",
           },
           {
-            title: "Pengelolaan Limbah B3",
-            link: "/pengelolaan-limbah-b3",
+            title: "Hazardous Waste Management",
+            link: "/services/technical-approval/hazardous-waste-management",
           },
           {
-            title: "Pemanfaatan Limbah B3",
-            link: "/pemanfaatan-limbah-b3",
+            title: "Hazardous Waste Utilization",
+            link: "/services/technical-approval/hazardous-waste-utilization",
           },
         ],
       },
       {
-        title: "Studi",
-        link: "/studi",
+        title: "Study",
+        link: "/services/study",
         submenu: [
           {
-            title: "Studi AMDAL",
-            link: "/studi-amdal",
+            title: "Environmental Impact Analysis",
+            link: "/services/study/environmental-impact-analysis",
           },
           {
-            title: "Studi DELH",
-            link: "/studi-delh",
+            title: "Environmental Evaluation Document",
+            link: "/services/study/environmental-evaluation-document",
           },
           {
-            title: "Studi DPLH",
-            link: "/studi-dplh",
+            title: "Environmental Management Document",
+            link: "/services/study/environmental-management-document",
           },
           {
-            title: "Studi Upaya Pengelolaan dan Pemantauan",
-            link: "/studi-upaya-pengelolaan-dan-pemantauan",
+            title: "Environmental Management & Monitoring Efforts",
+            link: "/services/study/environmental-management-monitoring-efforts",
           },
         ],
       },
       {
         title: "Monitoring",
-        link: "/monitoring",
+        link: "/services/monitoring",
       },
       {
-        title: "Installasi",
-        link: "/instalasi",
+        title: "Installation",
+        link: "/services/installation",
       },
       {
         title: "RKL-RPL",
-        link: "/rkl-rpl",
+        link: "/services/environmental-management-monitoring-plan",
       },
     ],
   },
@@ -68,24 +68,20 @@ const enItems = [
     title: "Company",
     submenu: [
       {
-        title: "Tentang Kami",
-        link: "/about",
+        title: "About Us",
+        link: "/company/about-us",
       },
       {
-        title: "Kontak",
-        link: "/kontak",
+        title: "Cotact Us",
+        link: "/company/contact-us",
       },
       {
-        title: "Portofolio",
-        link: "/portofolio",
+        title: "Our Portfolio",
+        link: "/company/our-portfolio",
       },
       {
-        title: "Klien",
-        link: "/klien",
-      },
-      {
-        title: "keunggulan Kami",
-        link: "/keunggulan-kami",
+        title: "Our Client",
+        link: "/company/our-client",
       },
     ],
   },

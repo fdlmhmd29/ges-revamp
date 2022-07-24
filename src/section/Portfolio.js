@@ -13,8 +13,7 @@ import { UilEye, UilLinkAlt } from "@iconscout/react-unicons";
 import moment from "moment";
 
 //Yellow
-import SectionHeader from "../components/SectionHeader";
-import MoreLink from "../components/MoreLink";
+import { MoreLink, SectionHeader } from "../lib";
 
 const Portfolio = ({ posts, prevPorto, nextPorto }) => {
   const isLocal = process.env.NODE_ENV === "development";

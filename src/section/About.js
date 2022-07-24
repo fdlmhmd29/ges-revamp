@@ -1,8 +1,8 @@
 import React from "react";
 import { Box, Container } from "theme-ui";
-import Info from "../components/Info";
-import Video from "../components/Video";
-import { UilCheckCircle } from "@iconscout/react-unicons";
+
+// Yellow
+import { Video, Info } from "../lib";
 
 const ShowCase = () => {
   return (

@@ -1,6 +1,6 @@
 module.exports = {
   url: "https://ges-revamp.vercel.app/",
-  title: "GES, Perusahaan Layanan Konsultasi Lingkungan",
+  title: "GES, ",
   subtitle:
     "PT Greenfield Environment Solution merupakan perusahaan penyedia jasa pengurusan dan layanan konsultasi lingkungan hidup.", // longDescription : appears in landing page meta description
   description:

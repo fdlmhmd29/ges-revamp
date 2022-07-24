@@ -4,6 +4,7 @@ import Image from "next/image";
 //Yellow
 import MoreLink from "./MoreLink";
 import { number } from "prop-types";
+import { useRouter } from "next/router";
 
 const SolutionCard = ({
   icon = "",
@@ -13,19 +14,29 @@ const SolutionCard = ({
   link = "",
   alt = "",
   className = "",
-}) => (
-  <Link as={"a"} href={href} sx={styles.card} id={id} className={className}>
-    <Flex as={"div"} sx={styles.left} className="left">
-      <Heading as={"h4"} sx={styles.cardHeading}>
-        {heading}
-      </Heading>
-      <MoreLink href={link} text={"Selengkapnya"} variant={"card"} />
-    </Flex>
-    <Box as={"div"} sx={styles.right} className="right">
-      <Image src={icon} width={100} height={100} loading={"lazy"} alt={alt} />
-    </Box>
-  </Link>
-);
+}) => {
+  let router = useRouter();
+  let items =
+    router.locale === "id"
+      ? "Selengkapnya"
+      : router.locale === "en"
+      ? "Know More"
+      : null;
+
+  return (
+    <Link as={"a"} href={href} sx={styles.card} id={id} className={className}>
+      <Flex as={"div"} sx={styles.left} className="left">
+        <Heading as={"h4"} sx={styles.cardHeading}>
+          {heading}
+        </Heading>
+        <MoreLink href={link} text={items} variant={"card"} />
+      </Flex>
+      <Box as={"div"} sx={styles.right} className="right">
+        <Image src={icon} width={100} height={100} loading={"lazy"} alt={alt} />
+      </Box>
+    </Link>
+  );
+};
 
 const styles = {
   card: {

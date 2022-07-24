@@ -6,6 +6,7 @@ export { default as Card } from "../components/Card";
 export { default as Container } from "../components/Container";
 export { default as DraftBadge } from "../components/DraftBadge";
 export { default as Footer } from "../components/Footer";
+export { default as FooterChild } from "../components/FooterChild";
 export { default as Header } from "../components/Header";
 export { default as Navbar } from "../components/Navbar";
 export { default as Logo } from "../components/Logo";
@@ -13,6 +14,11 @@ export { default as Main } from "../components/Main";
 export { default as Nav } from "../components/Nav";
 export { default as NavLink } from "../components/NavLink";
 export { default as ThemeToggle } from "../components/ThemeToggle";
+export { default as SectionHeader } from "../components/SectionHeader";
+export { default as MoreLink } from "../components/MoreLink";
+export { default as ShowcaseImage } from "../components/Image";
+export { default as Info } from "../components/Info";
+export { default as Video } from "../components/Video";
 
 // Layout
 export { default as Head } from "../layout/Head";
@@ -21,9 +27,15 @@ export { default as Style } from "../layout/Style";
 export { default as Wrapper } from "../layout/Wrapper";
 
 // Data
-export { default as ServicesData } from "../section/data/Services";
+// Services
+export { default as ServiceDatas } from "../section/data/services/ServiceDatas";
+export { default as ServiceCategories } from "../section/data/services/ServicesCategories";
+// Navbar
 export { default as enItems } from "../components/data/navbar/en";
 export { default as idItems } from "../components/data/navbar/id";
+// Solution
+export { default as enSolution } from "../section/data/solution/enSolution";
+export { default as idSolution } from "../section/data/solution/idSolution";
 
 // Images
 import icon1 from "../../public/assets/svg/icon1.svg";

@@ -202,10 +202,6 @@ const Style = (props) => (
       height: 100%;
     }
 
-    #nav-logo {
-      font-family: "Abril Fatface", cursive;
-    }
-
     .card-image {
       border-radius: 10px;
       width: 105%;
@@ -227,9 +223,11 @@ const Style = (props) => (
       backdrop-filter: blur(10px); */
     }
 
-    header.scrolled .logo {
+    header.scrolled .main-logo__container {
+      padding-top: 5px;
       height: 5rem;
-      line-height: 5rem;
+      align-items: center;
+      display: flex;
     }
 
     button,
@@ -306,13 +304,6 @@ const Style = (props) => (
       margin: 0 auto;
       padding: 0 20px;
       height: 58px;
-    }
-
-    .logo {
-      text-decoration: none;
-      font-size: 25px;
-      color: inherit;
-      margin-right: 20px;
     }
 
     .menus {

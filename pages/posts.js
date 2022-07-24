@@ -6,7 +6,7 @@ import { getAllPosts } from "../src/api";
 const PostsPage = ({ posts, prevPosts, nextPosts }) => (
   <Wrapper
     url={config.url}
-    title={config.title}
+    title={config.title + "Postingan terbaru"}
     description={config.description}
     imageUrl={config.shareImage}
     imageAlt={config.shareImageAlt}

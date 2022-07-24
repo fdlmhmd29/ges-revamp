@@ -1,12 +1,12 @@
 import React from "react";
 import { Box, Container } from "theme-ui";
-import Info from "../components/Info";
-import ShowcaseImage from "../components/Image";
-
 import useTranslation from "next-translate/useTranslation";
 
+// Yellow
+import { Info, ShowcaseImage } from "../lib";
+
 const ShowCase = () => {
-  const { t, lang } = useTranslation("showcase");
+  const { t } = useTranslation("showcase");
   const title = t("title");
   const subtitle = t("subtitle");
   const text = t("text");

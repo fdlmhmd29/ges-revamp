@@ -6,25 +6,21 @@ const data = [
     id: 1,
     text: "Privacy & Policy",
     link: "privacy-policy",
-    icon: <UilAsterisk size="10" color="#8c98a4" />,
   },
   {
     id: 2,
     text: "Terms & Conditions",
     link: "terms-conditions",
-    icon: <UilAsterisk size="10" color="#8c98a4" />,
   },
   {
     id: 3,
     text: "About Us",
     link: "about",
-    icon: <UilAsterisk size="10" color="#8c98a4" />,
   },
   {
     id: 4,
     text: "Contact Us",
     link: "contact",
-    icon: <UilAsterisk size="10" color="#8c98a4" />,
   },
   {
     id: 5,
@@ -55,7 +51,7 @@ const FooterChild = () => (
               >
                 <Link href={`/${item.link}`} passHref>
                   <NavLink
-                    sx={{ fontWeight: "400", fontSize: "14px" }}
+                    sx={{ fontWeight: "400", fontSize: "12px" }}
                     id={`nav-${item.text}`}
                   >
                     {item.text}
@@ -67,7 +63,7 @@ const FooterChild = () => (
                     mr: "10px",
                   }}
                 >
-                  {item.icon}
+                  <UilAsterisk size="10" color="#8c98a4" />
                 </Flex>
               </Flex>
             ))}

@@ -9,9 +9,9 @@ import {
   icon7,
   icon8,
   icon9,
-} from "../../lib";
+} from "../../../lib";
 
-const data = [
+const serviceDatas = [
   {
     id: 1,
     icon: icon1,
@@ -94,4 +94,4 @@ const data = [
   },
 ];
 
-export default data;
+export default serviceDatas;

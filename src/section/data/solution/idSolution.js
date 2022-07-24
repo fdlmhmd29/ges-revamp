@@ -1,6 +1,6 @@
-import { solution1, solution2, solution3 } from "../../lib";
+import { solution1, solution2, solution3 } from "../../../lib";
 
-const data = [
+const idSolution = [
   {
     id: 1,
     icon: solution1,
@@ -21,4 +21,4 @@ const data = [
   },
 ];
 
-export default data;
+export default idSolution;

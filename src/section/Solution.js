@@ -1,9 +1,17 @@
 import { Container, Flex } from "theme-ui";
-import SectionHeader from "../components/SectionHeader";
 import SolutionCard from "../components/SolutionCard";
-import SolutionData from "./data/Solution";
+import { enSolution, idSolution } from "../lib";
+import { useRouter } from "next/router";
 
 const Solution = () => {
+  let router = useRouter();
+  let items =
+    router.locale === "id"
+      ? idSolution
+      : router.locale === "en"
+      ? enSolution
+      : null;
+
   return (
     <Container
       as={"section"}
@@ -16,7 +24,7 @@ const Solution = () => {
         id={"solution-card-container"}
         sx={{ gap: "20px", justifyContent: "center" }}
       >
-        {SolutionData.map((item) => (
+        {items.map((item) => (
           <SolutionCard
             id={item.id}
             key={item.id}

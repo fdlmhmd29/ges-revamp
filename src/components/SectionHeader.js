@@ -1,4 +1,3 @@
-import { bool } from "prop-types";
 import { Box, Heading, Text } from "theme-ui";
 
 const SectionHeader = ({ title = "", slogan = "", isWhite }) => (

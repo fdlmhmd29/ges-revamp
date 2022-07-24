@@ -1,9 +1,10 @@
 import { Box, Container, Flex, Text, Link } from "theme-ui";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { UilChat, UilEnglishToChinese } from "@iconscout/react-unicons";
 import { useRouter } from "next/router";
 import useTranslation from "next-translate/useTranslation";
 // Yellow
+import { mainLogo } from "../lib/image";
 import { ThemeToggle, Logo } from "../lib";
 import Navbar from "./navbar/Navbar";
 import theme from "../layout/Theme";
@@ -57,7 +58,13 @@ const Nav = () => {
             alignItems: "center",
           }}
         >
-          <Logo />
+          <Flex className="main-logo__container" sx={styles.logo}>
+            <Logo
+              href={"/"}
+              logo={mainLogo}
+              alt={"Logo perusahaan PT Greenfield Environment Solution"}
+            />
+          </Flex>
 
           {/* ---Script--- */}
           {codeToRunOnClient && (
@@ -109,11 +116,10 @@ const Nav = () => {
 };
 
 const styles = {
-  container: {
-    // display: "flex",
-    // alignItems: "center",
-    // justifyContent: "space-between",
-    // flexWrap: "wrap",
+  logo: {
+    height: "7.5rem",
+    alignItems: "center",
+    transition: "all 0.3s ease-in-out",
   },
 };
 

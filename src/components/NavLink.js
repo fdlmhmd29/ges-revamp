@@ -1,18 +1,14 @@
 import { NavLink as A } from "theme-ui";
 import Link from "next/link";
 
-const NavLink = ({ href, active, children }) => (
+const NavLink = ({ href = "", active, children }) => (
   <Link href={href} passHref>
     <A
       sx={{
         position: "relative",
-        color: "inherit",
-        display: "block",
-        margin: "0 1rem",
-        textTransform: "uppercase",
-        fontSize: "inherit",
+        color: "#8c98a4 !important",
         letterSpacing: "0.031rem",
-        fontWeight: 500,
+        fontWeight: 400,
         textDecoration: "none",
         borderBottom: "0.031rem solid",
         borderColor: active ? "primary" : "background",
@@ -21,6 +17,7 @@ const NavLink = ({ href, active, children }) => (
 
         "&:hover": {
           borderColor: "primary",
+          color: "#29b600 !important",
         },
       }}
     >

@@ -16,7 +16,7 @@ import "slick-carousel/slick/slick-theme.css";
 const PostsPage = ({ posts }) => (
   <Wrapper
     url={config.url}
-    title={config.title}
+    title={config.title + "Perusahaan Layanan Konsultasi Lingkungan"}
     description={config.description}
     imageUrl={config.shareImage}
     imageAlt={config.shareImageAlt}

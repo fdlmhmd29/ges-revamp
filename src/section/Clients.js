@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import Image from "next/image";
 import { Box, Container } from "theme-ui";
+
+// Yellow
 import clients from "./data/Clients";
 
 export default class AutoPlay extends Component {
