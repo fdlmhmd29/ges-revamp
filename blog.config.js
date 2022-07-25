@@ -6,7 +6,7 @@ module.exports = {
   description:
     "Bekerjasama dengan Kementerian Lingkungan Hidup dan Kehutanan Republik Indonesia, Greenfield Environment Solution akan membantu Anda untuk menerbitkan izin lingkungan hidup dengan mudah dan praktis.",
   author: "Fadhil Muhammad",
-  analytics: "UA-219512633-1", // put your google analytics code here to add tracking
+  analytics: "", // put your google analytics code here to add tracking
   shareImage:
     "https://ges-revamp.vercel.app/img/beranda-situs-pt-greenfield-environment-solution.png",
   shareImageAlt: "Halaman awal situs PT Greenfield Environment Solution",
