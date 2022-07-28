@@ -58,7 +58,6 @@ const styles = {
     flexDirection: "column",
     alignItems: "flex-start",
     width: "50%",
-    overflow: "hidden",
     p: "20px",
   },
 

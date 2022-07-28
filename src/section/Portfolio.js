@@ -20,7 +20,7 @@ const Portfolio = ({ posts, prevPorto, nextPorto }) => {
 
   return (
     <Box id={"portfolio-section"} as={"section"} sx={styles.container}>
-      <Container id={"portfolio-section"}>
+      <Container>
         <Box id={"portfolio-container"} as={"div"}>
           <SectionHeader
             title={"Portofolio"}

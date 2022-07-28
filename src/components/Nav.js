@@ -49,7 +49,11 @@ const Nav = () => {
 
   return (
     <Box sx={{ borderBottom: "1px solid", borderColor: "#dddddd" }}>
-      <Container id="nav" as={"nav"} sx={styles.container}>
+      <Container
+        id="nav"
+        as={"nav"}
+        sx={{ variant: "layout.container", px: "15px" }}
+      >
         <Flex
           as={"div"}
           sx={{
@@ -107,7 +111,10 @@ const Nav = () => {
           borderColor: "#dddddd",
         }}
       >
-        <Container className="nav-container">
+        <Container
+          className="nav-container"
+          sx={{ variant: "layout.container", px: "15px" }}
+        >
           <Navbar />
         </Container>
       </Box>

@@ -15,14 +15,13 @@ const Solution = () => {
   return (
     <Container
       as={"section"}
-      className="solution-container"
       id="solution-section"
-      sx={{ mb: "-4.5rem" }}
+      sx={{ variant: "layout.container.solution" }}
     >
       <Flex
         as={"div"}
         id={"solution-card-container"}
-        sx={{ gap: "20px", justifyContent: "center" }}
+        sx={{ gap: "20px", justifyContent: "center", alignItems: "center" }}
       >
         {items.map((item) => (
           <SolutionCard

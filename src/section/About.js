@@ -6,22 +6,18 @@ import { Video, Info } from "../lib";
 
 const ShowCase = () => {
   return (
-    <Box id="about-container" as={"section"} sx={styles.container}>
-      <Container>
+    <Box
+      id="about-container"
+      as={"section"}
+      sx={{ variant: "box.background.secondary" }}
+    >
+      <Container sx={{ variant: "layout.container.about" }}>
         <Box
-          as={"div"}
+          id="info-container__about"
           sx={{
-            display: "grid",
-            columnGap: "8rem",
-            justifyContent: "space-between",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            height: "calc(100vh - 120px)",
-            maxHeight: "600px",
-            alignItems: "center",
+            variant: "box.top",
           }}
         >
-          <Video />
-
           <Info
             title={"Sekilas Tentang Kami"}
             subtitle={"PT Greenfield Environment Solution"}
@@ -33,23 +29,12 @@ const ShowCase = () => {
             link={"Selengkapnya"}
           />
         </Box>
+        <Box id="video-container__about" sx={{ variant: "box.bottom" }}>
+          <Video />
+        </Box>
       </Container>
     </Box>
   );
-};
-
-const styles = {
-  container: {
-    pt: "5rem !important",
-    background: "rgb(244,240,255)",
-    background: "rgb(244,240,255)",
-    background:
-      "-moz-linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-    background:
-      "-webkit-linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-    background:
-      "linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-  },
 };
 
 export default ShowCase;

@@ -24,38 +24,37 @@ function Services() {
   }, [filter]);
 
   return (
-    <Box id="sertvices-container" as={"section"} sx={styles.container}>
-      <Container as={"section"}>
-        <Box as={"div"}>
-          <SectionHeader
-            title={"Beragam Pilihan Jasa Perizinan dan Konsultasi Lingkungan"}
-            slogan={
-              "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
-            }
-          />
-
+    <Box
+      id="sertvices-section"
+      as={"section"}
+      sx={{ variant: "box.background.main" }}
+    >
+      <Container sx={{ variant: "layout.container.about" }}>
+        <SectionHeader
+          title={"Beragam Pilihan Jasa "}
+          slogan={
+            "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
+          }
+        />
+        <Box id="filter" as={"div"}>
           {/* Filter Buttons */}
           <Box
             as={"div"}
             className="service_filter__buttons"
             sx={styles.scrollMenu}
           >
-            <Box as={"div"}>
-              {ServiceCategories.map((c) => (
-                <Text
-                  as={"p"}
-                  id={c.name}
-                  key={c.id}
-                  className={`service_label ${
-                    filter === c.name ? "active" : ""
-                  }`}
-                  onClick={() => setFilter(c.name)}
-                  sx={styles.scrollMenu__button}
-                >
-                  {c.title}
-                </Text>
-              ))}
-            </Box>
+            {ServiceCategories.map((c) => (
+              <Text
+                as={"p"}
+                id={c.name}
+                key={c.id}
+                className={`service_label ${filter === c.name ? "active" : ""}`}
+                onClick={() => setFilter(c.name)}
+                sx={styles.scrollMenu__button}
+              >
+                {c.title}
+              </Text>
+            ))}
           </Box>
 
           {/* Portfolio Cards */}
@@ -82,23 +81,12 @@ function Services() {
 }
 
 const styles = {
-  container: {
-    py: "5rem !important",
-
-    background: "rgb(244,240,255)",
-    background:
-      "-moz-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-    background:
-      "-webkit-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-    background:
-      "linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-  },
   scrollMenu: {
     backgroundColor: "transparent",
     overflow: "auto",
     whiteSpace: "nowrap",
-    textAlign: "center",
-    marginBottom: "1.25rem",
+    textAlign: [null, null, null, null, "left", "center"],
+    mb: "2rem",
   },
 
   scrollMenu__button: {

@@ -5,9 +5,9 @@ import { keyframes } from "@emotion/react";
 import Image from "next/image";
 
 //Yellow
-import section2 from "../../public/assets/svg/section2.svg";
+import { section2 } from "../lib/image";
+import { Images, ResponsiveIframe } from "../lib";
 import Modal, { CloseButton } from "./Modal";
-import ResponsiveIframe from "./ResponsiveIframe";
 
 const Video = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,13 +18,7 @@ const Video = () => {
 
   return (
     <Box className={"showcase__image"} as={"div"} sx={styles.thumbnail}>
-      <Image
-        src={section2}
-        alt={"Studi AMDAL"}
-        loading={"lazy"}
-        quality={100}
-      />
-
+      <Images src={section2} />
       <Button
         sx={styles.videoBtn}
         onClick={handleClick}
@@ -61,11 +55,6 @@ const playPulse = keyframes`
 
 const styles = {
   thumbnail: {
-    justifyContent: "flex-start",
-    mr: ["auto", null, null, 6, 60, 85],
-    order: [2, null, null, 0],
-    ml: ["auto", null, null, 0],
-    display: "inline-flex",
     position: "relative",
     "> img": {
       position: "relative",

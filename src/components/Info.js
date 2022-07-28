@@ -6,24 +6,35 @@ import MoreLink from "./MoreLink";
 import useTranslation from "next-translate/useTranslation";
 
 function Info({ title, subtitle, text, variant, link, href }) {
-  const { t, lang } = useTranslation("common");
+  const { t } = useTranslation("common");
   const button = t("SCbutton");
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <ModalProvider>
       <Box id="showcase__info" as={"div"}>
-        <Heading id="title" as={"h3"} variant={"heading_primary"}>
-          {title}
-        </Heading>
-        <Heading id="subtitle" as={"h1"} variant={"heading_secondary"}>
-          {subtitle}
-        </Heading>
-        {text && (
-          <Text id="caption" as={"p"} variant={"heading_paragraph"}>
-            {text}
-          </Text>
-        )}
+        <Box
+          sx={{
+            width: [null, null, null, null, null, "90%"],
+            mb: "2rem !important",
+          }}
+        >
+          <Heading id="title" as={"h3"} sx={{ variant: "text.heading.title" }}>
+            {title}
+          </Heading>
+          <Heading
+            id="subtitle"
+            as={"h1"}
+            sx={{ variant: "text.heading.subtitle" }}
+          >
+            {subtitle}
+          </Heading>
+          {text && (
+            <Text id="caption" as={"p"} sx={{ variant: "text.caption.mobile" }}>
+              {text}
+            </Text>
+          )}
+        </Box>
         <Box id="showcase__cta" as={"div"} sx={styles.cta}>
           {link ? (
             <MoreLink href={href} text={link} variant={variant} />

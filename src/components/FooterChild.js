@@ -43,10 +43,10 @@ const FooterChild = () => (
         <Box>
           {/* Nav Link */}
           <Flex as={"ul"}>
-            {data.map((item) => (
+            {data.map((item, index) => (
               <Flex
                 as={"li"}
-                key={item.id}
+                key={index}
                 sx={{ alignItems: "center", gap: "10px", flexDirection: "row" }}
               >
                 <Link href={`/${item.link}`} passHref>

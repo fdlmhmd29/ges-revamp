@@ -3,7 +3,8 @@ import { Box, Container } from "theme-ui";
 import useTranslation from "next-translate/useTranslation";
 
 // Yellow
-import { Info, ShowcaseImage } from "../lib";
+import { Info, Images } from "../lib";
+import { section1 } from "../lib/image";
 
 const ShowCase = () => {
   const { t } = useTranslation("showcase");
@@ -12,32 +13,27 @@ const ShowCase = () => {
   const text = t("text");
 
   return (
-    <Box id="showcase-container" as={"section"} sx={styles.container}>
-      <Container className={"showcase"}>
-        <Box
-          as={"div"}
-          sx={{
-            display: "grid",
-            justifyContent: "space-between",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            height: "calc(100vh - 120px)",
-            maxHeight: "600px",
-            alignItems: "center",
-          }}
-        >
-          <Info title={title} subtitle={subtitle} text={text} variant={"cta"} />
-          <ShowcaseImage />
-        </Box>
-      </Container>
-    </Box>
+    <Container
+      id={"showcase-section"}
+      as={"section"}
+      sx={{ variant: "layout.container.showcase" }}
+    >
+      <Box
+        sx={{
+          variant: "box.top",
+        }}
+      >
+        <Info title={title} subtitle={subtitle} text={text} variant={"cta"} />
+      </Box>
+      <Box
+        sx={{
+          variant: "box.bottom",
+        }}
+      >
+        <Images src={section1} />
+      </Box>
+    </Container>
   );
-};
-
-const styles = {
-  container: {
-    pt: "8rem !important",
-    pb: "5rem !important",
-  },
 };
 
 export default ShowCase;

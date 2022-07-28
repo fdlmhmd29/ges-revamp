@@ -16,9 +16,10 @@ export { default as NavLink } from "../components/NavLink";
 export { default as ThemeToggle } from "../components/ThemeToggle";
 export { default as SectionHeader } from "../components/SectionHeader";
 export { default as MoreLink } from "../components/MoreLink";
-export { default as ShowcaseImage } from "../components/Image";
+export { default as Images } from "../components/Image";
 export { default as Info } from "../components/Info";
 export { default as Video } from "../components/Video";
+export { default as ResponsiveIframe } from "../components/ResponsiveIframe";
 
 // Layout
 export { default as Head } from "../layout/Head";
