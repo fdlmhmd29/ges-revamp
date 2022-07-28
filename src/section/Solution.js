@@ -1,6 +1,5 @@
-import { Container, Flex } from "theme-ui";
-import SolutionCard from "../components/SolutionCard";
-import { enSolution, idSolution } from "../lib";
+import { Container, Grid } from "theme-ui";
+import { Card, enSolution, idSolution } from "../lib";
 import { useRouter } from "next/router";
 
 const Solution = () => {
@@ -18,13 +17,14 @@ const Solution = () => {
       id="solution-section"
       sx={{ variant: "layout.container.solution" }}
     >
-      <Flex
+      <Grid
+        gap={3}
+        columns={[null, null, null, null, 2, 3]}
         as={"div"}
-        id={"solution-card-container"}
-        sx={{ gap: "20px", justifyContent: "center", alignItems: "center" }}
+        id={"card-container__solution"}
       >
         {items.map((item) => (
-          <SolutionCard
+          <Card
             id={item.id}
             key={item.id}
             icon={item.icon}
@@ -34,7 +34,7 @@ const Solution = () => {
             alt={item.heading}
           />
         ))}
-      </Flex>
+      </Grid>
     </Container>
   );
 };

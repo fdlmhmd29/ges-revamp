@@ -202,7 +202,6 @@ export default {
       mobile: {
         color: "text",
         fontSize: "1rem",
-
         lineHeight: "2",
       },
 

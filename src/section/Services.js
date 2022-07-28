@@ -30,13 +30,13 @@ function Services() {
       sx={{ variant: "box.background.main" }}
     >
       <Container sx={{ variant: "layout.container.about" }}>
-        <SectionHeader
-          title={"Beragam Pilihan Jasa "}
-          slogan={
-            "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
-          }
-        />
         <Box id="filter" as={"div"}>
+          <SectionHeader
+            title={"Beragam Pilihan Jasa "}
+            slogan={
+              "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
+            }
+          />
           {/* Filter Buttons */}
           <Box
             as={"div"}
@@ -58,7 +58,12 @@ function Services() {
           </Box>
 
           {/* Portfolio Cards */}
-          <Grid gap={3} columns={[2, null, 4]} as={"div"} id={"card-container"}>
+          <Grid
+            gap={3}
+            columns={[null, null, null, null, 2, 4]}
+            as={"div"}
+            id={"card-container__service"}
+          >
             {portofolio.map((item) =>
               item.filtered === true ? (
                 <Card
