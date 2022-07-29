@@ -60,7 +60,7 @@ function Services() {
           {/* Portfolio Cards */}
           <Grid
             gap={3}
-            columns={[null, null, null, null, 2, 4]}
+            columns={[null, null, null, 2, 3, 4]}
             as={"div"}
             id={"card-container__service"}
           >
@@ -90,7 +90,7 @@ const styles = {
     backgroundColor: "transparent",
     overflow: "auto",
     whiteSpace: "nowrap",
-    textAlign: [null, null, null, null, "left", "center"],
+    textAlign: [null, null, null, null, "center", "center"],
     mb: "2rem",
   },
 

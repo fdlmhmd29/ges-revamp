@@ -37,7 +37,7 @@ const Card = ({
             pb: text ? "15px" : null,
             color: "text",
             fontSize: "1rem",
-            height: text ? "4.438rem" : "2rem",
+            height: text ? "4.438rem" : "2.5rem",
           }}
         >
           {heading}

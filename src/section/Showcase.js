@@ -1,9 +1,10 @@
 import React from "react";
 import { Box, Container } from "theme-ui";
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 
 // Yellow
-import { Info, Images } from "../lib";
+import { Info } from "../lib";
 import { section1 } from "../lib/image";
 
 const ShowCase = () => {
@@ -25,12 +26,18 @@ const ShowCase = () => {
       >
         <Info title={title} subtitle={subtitle} text={text} variant={"cta"} />
       </Box>
+
       <Box
         sx={{
           variant: "box.bottom",
         }}
       >
-        <Images src={section1} />
+        <Image
+          src={section1}
+          alt={"Studi AMDAL"}
+          loading={"lazy"}
+          quality={100}
+        />
       </Box>
     </Container>
   );

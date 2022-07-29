@@ -19,9 +19,10 @@ const Solution = () => {
     >
       <Grid
         gap={3}
-        columns={[null, null, null, null, 2, 3]}
+        columns={[null, null, null, 3, 3, 3]}
         as={"div"}
         id={"card-container__solution"}
+        sx={{ px: [null, null, null, null, "100px", "100px"] }}
       >
         {items.map((item) => (
           <Card

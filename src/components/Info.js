@@ -30,7 +30,7 @@ function Info({ title, subtitle, text, variant, link, href }) {
             {subtitle}
           </Heading>
           {text && (
-            <Text id="caption" as={"p"} sx={{ variant: "text.caption.mobile" }}>
+            <Text id="caption" as={"p"} sx={{ variant: "text.caption.main" }}>
               {text}
             </Text>
           )}

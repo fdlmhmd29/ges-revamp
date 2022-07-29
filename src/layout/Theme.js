@@ -41,11 +41,11 @@ export default {
 
     modes: {
       dark: {
-        title: "#26b600",
-        subtitle: "#fff",
-        text: "#fff",
-        background: "#000",
-        lite: "#333",
+        // title: "#26b600",
+        // subtitle: "#fff",
+        // text: "#fff",
+        // background: "#000",
+        // lite: "#333",
       },
     },
   },
@@ -159,24 +159,6 @@ export default {
   },
 
   text: {
-    heading_primary: {
-      color: "title",
-      textTransform: "uppercase",
-      fontSize: "0.85rem",
-      letterSpacing: "1px",
-      borderLeft: "3px solid hsl(42, 92%, 52%)",
-      padding: "0.13rem 0.75rem",
-      marginBottom: "1rem",
-      fontWeight: 500,
-    },
-
-    heading_secondary: {
-      color: "text",
-      fontSize: "3rem",
-      fontWeight: 500,
-      lineHeight: "1.3",
-    },
-
     heading: {
       title: {
         color: "title",
@@ -189,6 +171,7 @@ export default {
         mb: "0.5rem !important",
         fontWeight: "500 !important",
       },
+
       subtitle: {
         color: "text",
         fontSize: "calc(1.375rem + 1.5vw)",
@@ -199,9 +182,9 @@ export default {
     },
 
     caption: {
-      mobile: {
+      main: {
         color: "text",
-        fontSize: "1rem",
+        fontSize: "16px",
         lineHeight: "2",
       },
 
@@ -211,43 +194,6 @@ export default {
         fontSize: "0.85rem",
         lineHeight: "2",
         margin: "2rem 0",
-      },
-    },
-  },
-
-  box: {
-    top: {
-      position: "relative",
-      top: [null, null, null, null, null, "-40px"],
-      width: [null, null, null, null, null, "50%"],
-      order: [null, null, null, null, 1, 0],
-    },
-
-    bottom: {
-      width: [null, null, null, null, "60%", "50%"],
-      order: [null, null, null, null, 0, 1],
-      pb: [null, null, null, null, "1.5rem", null],
-    },
-
-    background: {
-      main: {
-        background: "rgb(244,240,255)",
-        background:
-          "-moz-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-        background:
-          "-webkit-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-        background:
-          "linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-      },
-      secondary: {
-        background: "rgb(244,240,255)",
-        background: "rgb(244,240,255)",
-        background:
-          "-moz-linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-        background:
-          "-webkit-linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
-        background:
-          "linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
       },
     },
   },
@@ -274,36 +220,78 @@ export default {
     },
   },
 
+  box: {
+    top: {
+      top: [null, null, null, null, null, "-40px"],
+      width: [null, null, null, "100%", "50%", "50%"],
+      order: [null, null, null, 1, 0, 0],
+    },
+
+    bottom: {
+      width: [null, null, null, "100%", "50%", "50%"],
+      order: [null, null, null, 0, 1, 1],
+      pt: [null, null, null, "1.5rem", "1.5rem", null],
+    },
+
+    background: {
+      main: {
+        background: "rgb(244,240,255)",
+        background:
+          "-moz-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+        background:
+          "-webkit-linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+        background:
+          "linear-gradient(0deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+      },
+      secondary: {
+        background: "rgb(244,240,255)",
+        background: "rgb(244,240,255)",
+        background:
+          "-moz-linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+        background:
+          "-webkit-linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+        background:
+          "linear-gradient(180deg, rgba(244,240,255,1) 0%, rgba(255,255,255,1) 100%)",
+      },
+    },
+  },
+
   // Responsive Settings
-  breakpoints: ["360px", "375px", "412px", "768px", "1366px"],
+  breakpoints: ["360px", "375px", "768px", "1280px", "1440px"],
 
   layout: {
     container: {
       // Globally set max-width
-      maxWidth: [null, "540px", "720px", null, "720px", "1140px"],
+      maxWidth: ["540px", "721px", "720px", null, "1140px"],
       px: "15px",
 
       // Variants
+      showcase: {
+        pt: [
+          null,
+          null,
+          null,
+          "11rem !important",
+          "13rem !important",
+          "13rem !important",
+        ],
+        pb: "3.5rem !important",
+        display: "flex",
+        flexDirection: [null, null, null, "column", "row", "row"],
+        justifyContent: "space-between",
+        alignItems: "center",
+      },
+
       header: {
         display: "flex",
         flexDirection: "column",
         pb: "2rem !important",
       },
 
-      showcase: {
-        pt: "11rem !important",
-        pb: "3.5rem !important",
-        display: "flex",
-        flexDirection: [null, null, null, null, "column", "row"],
-        justifyContent: "space-between",
-        alignItems: "center",
-      },
-
       about: {
-        pt: "5rem !important",
-        pb: "3.5rem !important",
+        py: "3.5rem !important",
         display: "flex",
-        flexDirection: [null, null, null, null, "column", "row"],
+        flexDirection: [null, null, null, "column", "row", "row"],
         justifyContent: "space-between",
         alignItems: "center",
       },
