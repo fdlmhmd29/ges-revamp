@@ -290,6 +290,14 @@ export default {
 
       about: {
         py: "3.5rem !important",
+        display: "flex",
+        flexDirection: [null, null, "column", "column", "row", "row"],
+        justifyContent: "space-between",
+        alignItems: "center",
+      },
+
+      services: {
+        py: "3.5rem !important",
       },
 
       solution: {

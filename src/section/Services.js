@@ -29,7 +29,7 @@ function Services() {
       as={"section"}
       sx={{ variant: "box.background.main" }}
     >
-      <Container as={"div"} sx={{ variant: "layout.container.about" }}>
+      <Container as={"div"} sx={{ variant: "layout.container.services" }}>
         <SectionHeader
           title={"Beragam Pilihan Jasa "}
           slogan={
