@@ -224,12 +224,12 @@ export default {
     top: {
       top: [null, null, null, null, null, "-40px"],
       width: [null, null, null, "100%", "50%", "50%"],
-      order: [null, null, null, 1, 0, 0],
+      order: [null, null, 1, 1, 0, 0],
     },
 
     bottom: {
       width: [null, null, null, "100%", "50%", "50%"],
-      order: [null, null, null, 0, 1, 1],
+      order: [null, null, 0, 0, 1, 1],
       pt: [null, null, null, "1.5rem", "1.5rem", null],
     },
 
@@ -257,12 +257,12 @@ export default {
   },
 
   // Responsive Settings
-  breakpoints: ["360px", "375px", "768px", "1280px", "1440px"],
+  breakpoints: ["375px", "411px", "768px", "1280px", "1440px"],
 
   layout: {
     container: {
       // Globally set max-width
-      maxWidth: ["540px", "721px", "720px", null, "1140px"],
+      maxWidth: [null, null, "100%", "720px", "1140px"],
       px: "15px",
 
       // Variants
@@ -270,14 +270,14 @@ export default {
         pt: [
           null,
           null,
-          null,
+          "13rem !important",
           "11rem !important",
           "13rem !important",
           "13rem !important",
         ],
         pb: "3.5rem !important",
         display: "flex",
-        flexDirection: [null, null, null, "column", "row", "row"],
+        flexDirection: [null, null, "column", "column", "row", "row"],
         justifyContent: "space-between",
         alignItems: "center",
       },
@@ -290,10 +290,6 @@ export default {
 
       about: {
         py: "3.5rem !important",
-        display: "flex",
-        flexDirection: [null, null, null, "column", "row", "row"],
-        justifyContent: "space-between",
-        alignItems: "center",
       },
 
       solution: {

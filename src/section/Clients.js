@@ -12,14 +12,15 @@ export default class AutoPlay extends Component {
       infinite: true,
       lazyLoad: true,
       autoplay: true,
+      arrows: false,
       autoplaySpeed: 2000,
-      pauseOnHover: true,
       responsive: [
         {
           breakpoint: 9999,
           settings: {
             slidesToShow: 7,
             slidesToScroll: 3,
+            pauseOnHover: true,
           },
         },
         {
@@ -27,13 +28,14 @@ export default class AutoPlay extends Component {
           settings: {
             slidesToShow: 5,
             slidesToScroll: 2,
+            pauseOnHover: true,
           },
         },
         {
           breakpoint: 412,
           settings: {
             slidesToShow: 3,
-            slidesToScroll: 1,
+            slidesToScroll: 3,
           },
         },
         {
@@ -75,7 +77,6 @@ const styles = {
   imageWrapper: {
     display: "flex !important",
     justifyContent: "center",
-
     ":focus": {
       outline: "none",
     },

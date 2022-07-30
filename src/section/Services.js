@@ -29,57 +29,55 @@ function Services() {
       as={"section"}
       sx={{ variant: "box.background.main" }}
     >
-      <Container sx={{ variant: "layout.container.about" }}>
-        <Box id="filter" as={"div"}>
-          <SectionHeader
-            title={"Beragam Pilihan Jasa "}
-            slogan={
-              "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
-            }
-          />
-          {/* Filter Buttons */}
-          <Box
-            as={"div"}
-            className="service_filter__buttons"
-            sx={styles.scrollMenu}
-          >
-            {ServiceCategories.map((c) => (
-              <Text
-                as={"p"}
-                id={c.name}
-                key={c.id}
-                className={`service_label ${filter === c.name ? "active" : ""}`}
-                onClick={() => setFilter(c.name)}
-                sx={styles.scrollMenu__button}
-              >
-                {c.title}
-              </Text>
-            ))}
-          </Box>
-
-          {/* Portfolio Cards */}
-          <Grid
-            gap={3}
-            columns={[null, null, null, 2, 3, 4]}
-            as={"div"}
-            id={"card-container__service"}
-          >
-            {portofolio.map((item) =>
-              item.filtered === true ? (
-                <Card
-                  id={item.id}
-                  key={item.id}
-                  icon={item.icon}
-                  href={item.href}
-                  heading={item.heading}
-                  text={item.text}
-                  link={item.link}
-                  alt={item.heading}
-                />
-              ) : null
-            )}
-          </Grid>
+      <Container as={"div"} sx={{ variant: "layout.container.about" }}>
+        <SectionHeader
+          title={"Beragam Pilihan Jasa "}
+          slogan={
+            "Layanan terlengkap dan terbaik untuk segala kebutuhan bisnis dalam menerbitkan izin Lingkungan suatu bangunan dengan mudah dan praktis"
+          }
+        />
+        {/* Filter Buttons */}
+        <Box
+          as={"div"}
+          className="service_filter__buttons"
+          sx={styles.scrollMenu}
+        >
+          {ServiceCategories.map((c) => (
+            <Text
+              as={"p"}
+              id={c.name}
+              key={c.id}
+              className={`service_label ${filter === c.name ? "active" : ""}`}
+              onClick={() => setFilter(c.name)}
+              sx={styles.scrollMenu__button}
+            >
+              {c.title}
+            </Text>
+          ))}
         </Box>
+
+        {/* Portfolio Cards */}
+        <Grid
+          gap={3}
+          columns={[null, null, 1, 2, 3, 4]}
+          as={"div"}
+          id={"card-container__service"}
+        >
+          {portofolio.map((item) =>
+            item.filtered === true ? (
+              <Card
+                id={item.id}
+                key={item.id}
+                icon={item.icon}
+                href={item.href}
+                heading={item.heading}
+                text={item.text}
+                link={item.link}
+                alt={item.heading}
+              />
+            ) : null
+          )}
+        </Grid>
       </Container>
     </Box>
   );
@@ -87,10 +85,12 @@ function Services() {
 
 const styles = {
   scrollMenu: {
-    backgroundColor: "transparent",
-    overflow: "auto",
+    padding: "1.5rem",
+    backgroundColor: "#f4f0ff",
+    borderRadius: "12px",
+    overflowX: "auto",
     whiteSpace: "nowrap",
-    textAlign: [null, null, null, null, "center", "center"],
+    textAlign: [null, null, null, "center", "center", "center"],
     mb: "2rem",
   },
 
@@ -99,8 +99,6 @@ const styles = {
     padding: "0.25rem 0.5rem",
     cursor: "pointer",
     fontSize: "0.875rem",
-    // textTransform: "uppercase",
-    color: "text",
     fontWeight: 500,
     letterSpacing: "0.050rem",
     transition: "all 0.3s ease",
